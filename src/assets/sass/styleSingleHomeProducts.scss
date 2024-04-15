@@ -1,0 +1,49 @@
+.col-mb-3 {
+    .card-hover{
+        height: 420px;
+        transition: 0.5s;
+        overflow: hidden;
+        .cart {
+            .addtocart {
+                width: 70%;
+                padding: 7px 10px;
+                background-color: #F59A57;
+                border: none;
+                border-radius: 30px;
+                color: white;
+                transition: 0.5s;
+                transform: translateY(130px);
+                
+            }
+            .wishlist {
+            border: none;
+            background-color: white;
+            transition: 0.5s;
+            transform: translateY(100px);
+        }
+
+        }
+        &:hover {
+            height: 470px;
+            .cart {
+                .addtocart {
+                    width: 70%;
+                    padding: 7px 10px;
+                    background-color: #F59A57;
+                    border: none;
+                    border-radius: 30px;
+                    color: white;
+                    transform: translateY(-10px);
+                    
+                }
+                .wishlist {
+                border: none;
+                background-color: white;
+                transform: translateY(-10px);
+            }
+    
+            }
+        }
+    }
+}
+

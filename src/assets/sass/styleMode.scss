@@ -1,0 +1,99 @@
+* {
+     font-family: "Lora", serif;
+}
+
+.light {
+    background-color: #FBFAF7 !important;
+    color: black;
+    footer {
+        background-color: #282828 !important;
+        color: white !important;
+    }
+    footer .col-6 ul .nav-link {
+        color: white;
+    }
+    header .woodmart-one {
+        background-color: #FBFAF7 ;
+        color: black !important;
+        padding: 0 100px;
+    }
+    header nav ul li .nav-link {
+        background-color: #FBFAF7;
+        color: black !important;
+    }
+    
+    .home-section .container .card {
+        background-color: #FBFAF7;
+    }
+
+    .about-section2 .container .card {
+        background-color: #FBFAF7;
+    }
+    .logo {
+        width: 210px;
+        height: 40px;
+    }
+    .products-details {
+        background-color: #FBFAF7 !important;
+    }
+
+}
+.dark {
+    background-color: #282828 !important;
+    color: white;
+    footer {
+        background-color: white !important;
+        color: black !important;
+    }
+    footer .col-6 ul .nav-link {
+        color: black;
+    }
+    header .woodmart-one {
+        background-color: #282828 !important;
+        color: white ;
+        padding: 0 100px;
+    }
+    header ul li .nav-link {
+        background-color: #282828 !important;
+        color: white !important;
+    }
+    header .navbar {
+        background-color: #282828 !important;
+    }
+    header .navbar-toggler {
+        background-color: white !important;
+    }
+    header .navbar-collapse {
+        background-color: #282828 !important;
+        padding: 0px;
+    }
+    header .dark-mode-logo {
+        color: white;
+    }
+    .logo {
+        width: 210px;
+        height: 40px;
+    }
+    .home-section .container .card {
+        background-color: #282828;
+    }
+    .about-section2 .container .card {
+        background-color: #282828;
+    }
+    .cart-section-one .dark-text {
+        color: black;
+    }
+}
+@media (max-width: 980px) {
+    .dark {
+        header{
+            .navbar-collapse {
+                background-color: #282828 !important;
+                color: white !important;
+            }
+             .dark-mode-logo {
+                color: white;
+            }
+        }
+    }
+}

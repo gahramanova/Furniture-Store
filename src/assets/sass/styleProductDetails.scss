@@ -1,0 +1,37 @@
+.col-mb-3 {
+    img {
+        border-radius: 15px;
+    }
+}
+.col-sm-12 {
+    .text {
+        border-radius: 5px;
+        background-color: #ecebeb;
+        padding: 15px 0 15px 15px;
+        .discount{
+            padding-right: 15px;
+            font-size: 40px;
+            color: #F59A57;
+        }
+        
+    }
+    .addtocart {
+        padding: 10px 15px;
+        width: 50%;
+        border: none;
+        background-color: #F59A57;
+        border-radius: 40px;
+        color: white;
+        
+    }
+
+    .goback {
+        padding: 10px 15px;
+        width: 50%;
+        border: none;
+        background-color: black;
+        border-radius: 40px;
+        color: white;
+    }
+    
+}

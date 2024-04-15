@@ -1,0 +1,175 @@
+{
+    "navbar": {
+        "0": "Hədiyyə kartları",
+        "1": "Salon",
+        "2": "Haqqımızda",
+        "3": "Ekspert ilə əlaqə"
+    },
+    "header-login" : {
+        "0": "Login",
+        "1": "Sign up",
+        "2": "Salam,"
+    },
+    "header": {
+        "0": "Məhsulların axtarışı",
+        "1": "Əsas səhifə",
+        "2": "Haqqımızda",
+        "3": "Məqalə",
+        "4": "Məhsullar",
+        "5": "Salon",
+        "6": "Əlaqə",
+        "7": "Sevimlilərim"
+    },
+    "home-slider": {
+        "0": "Dekor kateqoriyasında daha çox məhsulları kəşf edin",
+        "1": "Terroaca Vaza, Courtney Hanrey tərəfindən",
+        "2": "Indi al", 
+        "3": "Stul kateqoriyasında daha çox məhsul kəşf et",
+        "4": "Upholstred stul, Esther Howard tərəfindən",
+        "5": "Divan kateqoriyasında daha çox məhsulu kəşf edin",
+        "6": "Bölməli parça divan, Ramon Esteve tərəfindən"
+    },
+    "home-section-one": {
+        "0": "Kateqoriyalarımız",
+        "1": "Çoxlu yeni məhsullar və məhsul kolleksiyaları",
+        "2": "Stul",
+        "3": "Stol",
+        "4": "Divan",
+        "5": "Oturacaq",
+        "6": "Yataq",
+        "7": "Anbar",
+        "8": "Tekstil",
+        "9": "İşıqlandırma",
+        "10": "Oyuncaqlar", 
+        "11": "Dekor", 
+        "12": "Həftənin ən yaxşıları",
+        "13": "Səbətə əlavə et",
+        "14": "Brendlər üzrə alış-veriş",
+        "15": "Həftənin mebel kolleksiyası",
+        "16": "Kolleksiyadan ən populyar məhsulları",
+        "17": "Mebel seçmək qaydaları",
+        "18": "İstər təkbaşına, istərsə də ailə ilə yaşamaqdan asılı olmayaraq, qonaq otağınız vacib bir məkandır.",
+        "19": "Bu otaq ailənizin birlikdə vaxt keçirdiyi otaqdır və qonaqlarınızın əksəriyyəti vaxtlarının çoxunu keçirəcəkləri otaqdır. Gündəlik həyatın köhnəlməsinə və köhnəlməsinə tab gətirərək xoş, qonaqpərvər görünüş yaradan mebel seçmək ən yaxşı seçimdir. ehtiyaclarınız üçün işləmək üçün bu məkanı əldə etmək üçün açardır.",
+        "20": "Tək rəng sxemində və üslubda əşyalar seçin",
+        "21": "Otaq sahəsini nəzərə alın",
+        "22": "Lazımsız mebel parçaları almayın",
+        "23": "Necə mebel seçməli?",
+        "24": "SØLREM mebel kolleksiyası"        
+
+    }, 
+    "footer" : {
+        "0": "Geniş mebel və dekorasiya seçimi ilə onlayn mağaza",
+        "1": "Mebel hər hansı bir otağın dəyişməz atributudur. Məhz onlar ona lazımi atmosferi verir, məkanı rahat və rahat edir, məhsuldar iş üçün əlverişli şərait yaradır və ya çətin gündən sonra istirahət etməyə kömək edir. Müştərilər getdikcə daha tez-tez onlayn mağazada sifariş vermək istəyirlər, o zaman boş vaxtlarınızda kompüter arxasında əyləşə, fotoşəkildəki mebelləri düzəldə və sakitcə bəyəndiyiniz mebeli ala bilərsiniz. Onlayn mağazada böyük mebel kataloqu var: həm ev, həm də ofis mebelləri mövcuddur",
+        "2": "Mebel istehsalı müasir sənət növüdür",
+        "3": "Mebel istehsalçıları, eləcə də digər məişət əşyaları istehsalçıları heyrətamiz təkliflərlə doludur: biz tez-tez həm standart kütləvi istehsal məhsullarına, həm də unikal yaradıcılığa rast gəlirik - peşəkar sənətkarların mebelləri, gözəlliyin əsl biliciləri tərəfindən yüksək qiymətləndiriləcəkdir. Biz sizin üçün hər bir məhsul vahidində zərifliyi, keyfiyyəti və praktikliyi məharətlə birləşdirməyi bacaran müasir ustalardan ən yaxşı modelləri seçmişik. Bizim çeşidimizə sübut edilmiş şirkətlərin məhsulları daxildir. Uzun illər davamlı birgə iş onların etibarlılığına və dürüstlüyünə şübhə etməyə əsas vermədi. Onların hamısı öz məhsullarının yüksək keyfiyyətinə, əla əməliyyat xüsusiyyətlərinə, məhsulların cəlbedici görünüşünə, mebelin uzun müddət istifadəsinə, həmçinin təhlükəsizliyinə zəmanət verir.",
+        "4": "Faydalı linklər",
+        "5": "Haqqımızda",
+        "6": "Əlaqə",
+        "7": "Salon",
+        "8": "Məqalə",
+        "9": "Hədiyyə kartları",
+        "10": "Kateqoriyalar",
+        "11": "Stul",
+        "12": "Stol",
+        "13": "Divan",
+        "14": "Oturacaq",
+        "15": "Yataq",
+        "16": "Digər linklər",
+        "17": "Əsas səhifə",
+        "18": "Xüsusiyyətlər",
+        "19": "Qiymətləndirmə",
+        "20": "FAQs",
+        "21": "Haqqımızda",
+        "22": "Bizə abunə olun:",
+        "23": "Proqramı mobil telefona yükləyin",
+        "24": "© 2024 Company, Inc. Bütün hüquqlar qorunur."
+
+    },
+    "about": {
+        "0": "Haqqımızda",
+        "1": "Online mağazamız haqqında",
+        "2": "Bir səhər Qreqor Samsa narahat yuxulardan oyananda yatağında dəhşətli həşəratlara çevrildiyini gördü. Zirehə bənzəyən kürəyi üstə uzanmışdı və başını bir az qaldırsa, yüngülcə günbəzli və tağlarla bərkidilmiş qəhvəyi qarnını görərdi.",
+        "3": "Komanda üzvləri",
+        "4": "Mebel kolleksiyası", 
+        "5": "Biznesimizə nece başladıq"
+    }, 
+    "showroom": {
+        "0": "Salonlar",
+        "1": "Milan Salon", 
+        "2": "Mebel hər hansı bir otağın dəyişməz atributudur. Məhz onlar məkanı rahat və rahat edən, ona lazımi atmosferi verənlərdir. Müştərilər getdikcə daha tez-tez onlayn mağazada sifariş vermək istəyirlər, o zaman siz boş vaxtlarınızda kompüter arxasında əyləşə, fotoşəkildəki mebelləri yerləşdirə və sakitcə bəyəndiyiniz mebeli ala biləsiniz.",
+        "3": "Həll yaradın", 
+        "4": "Torina Salon", 
+        "5": "Mebel hər hansı bir otağın dəyişməz atributudur. Məhz onlar məkanı rahat və rahat edən, ona lazımi atmosferi verənlərdir. Müştərilər getdikcə daha tez-tez onlayn mağazada sifariş vermək istəyirlər, o zaman siz boş vaxtlarınızda kompüter arxasında əyləşə, fotoşəkildəki mebelləri yerləşdirə və sakitcə bəyəndiyiniz mebeli ala biləsiniz.",
+        "6": "Həll yaradın"
+    },
+    "contact": {
+        "0": "Bizimlə əlaqə", 
+        "1": "Milan",
+        "2": "B.ertəsi - Cümə",
+        "3": "Torina",
+        "4": "B.ertəsi - Cümə",
+        "5": "Ekspertlər ilə əlaqə",
+        "6": "Ad",
+        "7": "Email",
+        "8": "Mesajınızı yazın",
+        "9": "Mesajı göndər",
+        "10": "Tez-tez soruşulan suallar",
+        "11": "Mənim sifarişim hələdə gəlməyib. Haradaır?",
+        "12": "İstirahət günlərində çatdırılma edirsiniz?",
+        "13": "Mənim poçt indeksimə çatdırırsınız?", 
+        "14": "Bütün sifarişlərdə ertəsi gün çatdırılma var?",
+        "15": "Çatdırılma üçün imza atmaq üçün orada olmalıyam?"
+    },
+    "login": {
+        "0": "Daxil ol",
+        "1": "DAXİL OL",
+        "2": "Mail ünvanı", 
+        "3": "Şifrə",
+        "4": "Yeni hesab yarat",
+        "5": "Şifrəni unutmusan?",
+        "6": "Daxil ol"
+    },
+    "register": {
+        "0": "Hesab yarat",
+        "1": "Hesab yarat",
+        "2": "Ad",
+        "3": "Soyad",
+        "4": "Mail ünvanı",
+        "5": "Şifrə",
+        "6": "Təkrar şifrə",
+        "7": "Hesabın var?",
+        "8": "Hesab yarat"
+    },
+    "products": {
+        "0": "Məhsullar"
+    },
+    "blog" : {
+        "0": "Məqalələr"
+    },
+    "myprofile": {
+        "0": "Profilim"
+    },
+    "wishlist": {
+        "0": "Sevimlilər"
+    },
+    "faq": {
+        "0": "Mənim sifarişim hələdə gəlməyib. Haradadır?",
+        "1": "Zahirən zərif dizayn gözlənilməz məzmunla tez şişməyə və ya faktiki fəaliyyətin ağırlığı altında pozulmağa başlaya bilər. Saxta məlumatlar gözəl görünüşlü tərtibatı təmin edə bilər, lakin bu, canlı, nəfəs alan tətbiqin nəyə dözməli olduğunu əks etdirmir. Real data edir.",
+        "2": "Bayram günlərində çatdırırsınız?",
+        "3": "Professional istifadə şablon sistemlərində veb saytlar. Kommersiya nəşriyyat platformaları və məzmun idarəetmə sistemləri eyni şablondan istifadə edərək fərqli mətnləri, fərqli məlumatları göstərə bilmənizi təmin edir. Söhbət yüzlərlə məqaləyə, veb mağazalar üçün məhsul səhifələrinə nəzarətdən gedir.",
+        "4": "Mənim poçt koduma çatdırırsan?",
+        "5": "Əgər nüsxə dizaynda diqqəti yayındırırsa, onda siz nəyisə səhv edirsiniz və ya onlar surət dəyişikliklərini müzakirə edirlər. Bu, bir az zəhlətökən ola bilər, lakin siz onlara bu müzakirənin başqa vaxt üçün ən uyğun olacağını deyə bilərsiniz. Ən pis halda müzakirə saytınızın son məqsədinə doğru işləyir, burada lorem ipsum haqqında suallar cavab vermir.",
+        "6": "Bütün sifarişlərdə növbəti gün çatdırılma varmı?",
+        "7": "Zahirən zərif dizayn gözlənilməz məzmunla tez şişməyə və ya faktiki fəaliyyətin ağırlığı altında pozulmağa başlaya bilər. Saxta məlumatlar gözəl görünüşlü tərtibatı təmin edə bilər, lakin bu, canlı, nəfəs alan tətbiqin nəyə dözməli olduğunu əks etdirmir. Real data edir.",
+        "8":"Çatdırılma üçün imza atmaq üçün orada olmalıyam?",
+        "9": "Professional istifadə şablon sistemlərində veb saytlar. Kommersiya nəşriyyat platformaları və məzmun idarəetmə sistemləri eyni şablondan istifadə edərək fərqli mətnləri, fərqli məlumatları göstərə bilmənizi təmin edir. Söhbət yüzlərlə məqaləyə, veb mağazalar üçün məhsul səhifələrinə nəzarətdən gedir."
+    },
+    "cart": {
+        "0": "Ümumi məbləğ",
+        "1": "Sub cəmi:",
+        "2": "Göndərmə",
+        "3": "Pulsuz göndərmə",
+        "4": "Ümumi"
+    }
+    
+}

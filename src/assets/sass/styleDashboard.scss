@@ -1,0 +1,12 @@
+.container {
+    .edit {
+        background-color: #ccc; 
+    }
+    .remove {
+        background-color: #F59A57;
+        color: white;
+    &:hover, & *:hover {
+        cursor: pointer;
+    }
+    }
+}

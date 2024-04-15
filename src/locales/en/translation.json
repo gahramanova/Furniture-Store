@@ -1,0 +1,174 @@
+{
+    "navbar": {
+        "0": "Gift-Cards",
+        "1": "Showroom",
+        "2": "About Us",
+        "3": "Contact with an expert"
+    },
+    "header-login" : {
+        "0": "Login",
+        "1": "Sign up",
+        "2": "Hi,"
+    },
+    "header": {
+        "0": "Search for products",
+        "1": "Home",
+        "2": "About",
+        "3": "Blog",
+        "4": "Products",
+        "5": "Showrooms",
+        "6": "Contact",
+        "7": "My wishlist"
+    },
+    "home-slider": {
+        "0": "Discover the more products in the decor category",
+        "1": "Terroaca Vaza by Courtney Hanrey",
+        "2": "Shop now", 
+        "3": "Discover the more products in the chair category",
+        "4": "Upholstred stul by Esther Howard",
+        "5": "Discover the more products in the sofa category",
+        "6": "Sectional fabric sofa by Ramon Esteve"
+    },
+    "home-section-one": {
+        "0": "Our categories",
+        "1": "Lots of new products and product collections",
+        "2": "Chairs",
+        "3": "Tables",
+        "4": "Sofas",
+        "5": "Armchairs",
+        "6": "Beds",
+        "7": "Storage",
+        "8": "Textiles",
+        "9": "Lighting",
+        "10": "Toys", 
+        "11": "Decor",
+        "12": "Weekly Bestsellers",
+        "13": "Add to cart",
+        "14": "Shopping by brands",
+        "15": "Furniture collection of the week",
+        "16": "The most popular products from the collection",
+        "17": "Rules for choosing furniture",
+        "18": "Whether living on your own or with a family, your living room is an important space.",
+        "19": "This room is where your family spends time together, and it is the room most of your guests will spend the majority of their time in. Choosing furniture that creates a pleasant, welcoming appearance while holding up against the wear and tear of everyday life is the key in getting this space to work for your needs.",
+        "20": "Choose items in a single color scheme and style",
+        "21": "Consider the area of the room",
+        "22": "Do not buy unnecessary pieces of furniture",
+        "23": "How choose furniture",
+        "24": "SØLREM furniture collection"
+    },
+    "footer" : {
+        "0": "Online store with a wide selection of furniture and decor",
+        "1": "Furniture is an invariable attribute of any room. It is they who give it the right atmosphere, making the space cozy and comfortable, creating favorable conditions for p roductive work or helping to relax after a hard day. More and more often, customers want to place an order in an online store, when you can sit down at the computer in your free time, arrange the furniture in the photo and calmly buy the furniture you like. The online store has a large catalog of furniture: both home and office furniture are available",
+        "2": "Furniture production is a modern form of art",
+        "3": "Furniture manufacturers, as well as manufacturers of other home goods, are full of amazing offers: we often come across both standard mass-produced products and unique creations – furniture from professional craftsmen, which will be appreciated by true connoisseurs of beauty. We have selected for you the best models from modern craftsmen who managed to ingeniously combine elegance, quality and practicality in each product unit. Our assortment includes products from proven companies. Who for many years of continuous joint work did not give reason to doubt their reliability and honesty. All of them guarantee the high quality of their products, excellent operational characteristics, attractive appearance of the products, a long period of use of the furniture, as well as safety.",
+        "4": "Useful links",
+        "5": "About us",
+        "6": "Contact",
+        "7": "Showrooms",
+        "8": "Blog",
+        "9": "Gift Cards",
+        "10": "Categories",
+        "11": "Chairs",
+        "12": "Tables",
+        "13": "Sofas",
+        "14": "Armchairs",
+        "15": "Beds",
+        "16": "Other Links",
+        "17": "Home",
+        "18": "Features",
+        "19": "Pricing",
+        "20": "FAQs",
+        "21": "About",
+        "22": "Subscribe Us:",
+        "23": "Download App on Mobile",
+        "24": "© 2024 Company, Inc. All rights reserved."
+    },
+    "about": {
+        "0": "About Us",
+        "1": "About our online store",
+        "2": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff.",
+        "3": "Team Memmbers",
+        "4": "Furniture Collection", 
+        "5": "How we start our businnes"
+    }, 
+    "showroom": {
+        "0": "Showroom",
+        "1": "Milano Showroom", 
+        "2": "Furniture is an invariable attribute of any room. It is they who give it the right atmosphere, making the space cozy and comfortable. More and more often, customers want to place an order in an online store, when you can sit down at the computer in your free time, arrange the furniture in the photo and calmly buy the furniture you like",
+        "3": "Make a route", 
+        "4": "Torino Showroom", 
+        "5": "Furniture is an invariable attribute of any room. It is they who give it the right atmosphere, making the space cozy and comfortable. More and more often, customers want to place an order in an online store, when you can sit down at the computer in your free time, arrange the furniture in the photo and calmly buy the furniture you like",
+        "6": "Make a route"
+    },
+    "contact": {
+        "0": "Contact us", 
+        "1": "Milano",
+        "2": "Monday - Friday",
+        "3": "Torino",
+        "4": "Monday - Friday",
+        "5": "Contact with an expert",
+        "6": "Name",
+        "7": "Email",
+        "8": "Write your message",
+        "9": "Send message",
+        "10": "Frequently asked questions",
+        "11": "My order hasn't arrived yet. Where is it?",
+        "12": "Do you deliver on public holidays?",
+        "13": "Do you deliver to my postcode?", 
+        "14": "Is next day delivery available on all orders?",
+        "15": "Do I need to be there to sign for delivery?"
+    },
+    "login": {
+        "0": "Login",
+        "1": "LOGIN",
+        "2": "Email address", 
+        "3": "Password",
+        "4": "Create new account",
+        "5": "Forgot your password?",
+        "6": "Login"
+    },
+    "register": {
+        "0": "Register",
+        "1": "REGISTER",
+        "2": "First Name",
+        "3": "Last Name",
+        "4": "Email",
+        "5": "Password",
+        "6": "Again Password",
+        "7": "Do you have already an account?",
+        "8": "Register"
+    },
+    "products": {
+        "0": "Products"
+    },
+    "blog" : {
+        "0": "Blogs"
+    }, 
+    "myprofile": {
+        "0": "My profile"
+    },
+    "wishlist": {
+        "0": "Wishlist"
+    },
+    "faq": {
+        "0": "My order hasn't arrived yet. Where is it?",
+        "1": "A seemingly elegant design can quickly begin to bloat with unexpected content or break under the weight of actual activity. Fake data can ensure a nice looking layout but it doesn’t reflect what a living, breathing application must endure. Real data does.",
+        "2": "Do you deliver on public holidays?",
+        "3": "Websites in professional use templating systems. Commercial publishing platforms and content management systems ensure that you can show different text, different data using the same template. When it’s about controlling hundreds of articles, product pages for web shops.",
+        "4": "Do you deliver to my postcode?",
+        "5": "If the copy becomes distracting in the design then you are doing something wrong or they are discussing copy changes. It might be a bit annoying but you could tell them that that discussion would be best suited for another time. At worst the discussion is at least working towards the final goal of your site where questions about lorem ipsum don’t",
+        "6": "Is next-day delivery avaiable on all orders?",
+        "7": "A seemingly elegant design can quickly begin to bloat with unexpected content or break under the weight of actual activity. Fake data can ensure a nice looking layout but it doesn’t reflect what a living, breathing application must endure. Real data does.",
+        "8":"Do I need to be there to sign for delivery?",
+        "9": "Websites in professional use templating systems. Commercial publishing platforms and content management systems ensure that you can show different text, different data using the same template. When it’s about controlling hundreds of articles, product pages for web shops."
+
+    },
+    "cart": {
+        "0": "Cart total",
+        "1": "Sub total:",
+        "2": "Shipping",
+        "3": "Free shipping",
+        "4": "Total"
+    }
+    }
+    
