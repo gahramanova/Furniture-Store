@@ -227,7 +227,7 @@ const category = [
         sku: "BS-156"
     },
     {
-        id: 15,
+        id: 16,
         title: "Herman",
         category: "storage",
         price: 825.00,
@@ -242,7 +242,7 @@ const category = [
         sku: "ST-077"
     },
     {
-        id: 16,
+        id: 17,
         title: "Maya dune Linel",
         category: "textiles",
         price: 530.00,
@@ -257,7 +257,7 @@ const category = [
         sku: "LT-047"
     },
     {
-        id: 17,
+        id: 18,
         title: "Mademoiselle Annette",
         category: "lighting",
         price: 680.00,
@@ -272,7 +272,7 @@ const category = [
         sku: "LG-063"
     },
     {
-        id: 18,
+        id: 19,
         title: "Dancing Alligator",
         category: "toys",
         price: 32.00,
@@ -287,7 +287,7 @@ const category = [
         sku: "TS-141"
     },
     {
-        id: 19,
+        id: 20,
         title: "Oree",
         category: "decor",
         price: 289.00,
@@ -302,7 +302,7 @@ const category = [
         sku: "DR-158"
     },
     {
-        id: 20,
+        id: 21,
         title: "Sophie",
         category: "chairs",
         price: 520.00,
@@ -317,7 +317,7 @@ const category = [
         sku: "CH-110"
     },
     {
-        id: 21,
+        id: 22,
         title: "Aruda",
         category: "tables",
         price: 699.00,
@@ -332,7 +332,7 @@ const category = [
         sku: "TB-251"
     },
     {
-        id: 22,
+        id: 23,
         title: "Quilton",
         category: "sofas",
         price: 2100.00,
@@ -347,7 +347,7 @@ const category = [
         sku: "SO-450"
     },
     {
-        id: 23,
+        id: 24,
         title: "Sendai",
         category: "armchairs",
         price: 679.00,
@@ -362,7 +362,7 @@ const category = [
         sku: "AR-223"
     },
     {
-        id: 24,
+        id: 25,
         title: "Brera",
         category: "beds",
         price: 1444.00,
@@ -377,7 +377,7 @@ const category = [
         sku: "BS-156"
     },
     {
-        id: 25,
+        id: 26,
         title: "Niky",
         category: "storage",
         price: 640.00,
@@ -392,7 +392,7 @@ const category = [
         sku: "ST-077"
     },
     {
-        id: 26,
+        id: 27,
         title: "Architecture Throw",
         category: "textiles",
         price: 380.00,
@@ -407,7 +407,7 @@ const category = [
         sku: "LT-047"
     },
     {
-        id: 27,
+        id: 28,
         title: "Lullaby Bunny",
         category: "toys",
         price: 60.00,
@@ -422,7 +422,7 @@ const category = [
         sku: "TS-141"
     },
     {
-        id: 28,
+        id: 29,
         title: "Ice Cream",
         category: "lighting",
         price: 850.00,
@@ -437,7 +437,7 @@ const category = [
         sku: "LG-063"
     },
     {
-        id: 29,
+        id: 30,
         title: "Safari Elephant",
         category: "toys",
         price: 40.00,
@@ -452,7 +452,7 @@ const category = [
         sku: "TS-141"
     },
     {
-        id: 30,
+        id: 31,
         title: "Swing",
         category: "decor",
         price: 520.00,
@@ -467,7 +467,7 @@ const category = [
         sku: "DR-158"
     },
     {
-        id: 31,
+        id: 32,
         title: "Petit",
         category: "chairs",
         price: 327.00,
@@ -482,7 +482,7 @@ const category = [
         sku: "CH-110"
     },
     {
-        id: 32,
+        id: 33,
         title: "Eames Segmented",
         category: "tables",
         price: 3200.00,
@@ -497,7 +497,7 @@ const category = [
         sku: "TB-251"
     },
     {
-        id: 33,
+        id: 34,
         title: "Palissade",
         category: "sofas",
         price: 1890.00,
@@ -511,7 +511,7 @@ const category = [
         sku: "SO-450"
     },
     {
-        id: 34,
+        id: 35,
         title: "Lima",
         category: "armchairs",
         price: 460.00,
@@ -526,7 +526,7 @@ const category = [
         sku: "AR-223"
     },
     {
-        id: 35,
+        id: 36,
         title: "Be look",
         category: "beds",
         price: 1200.00,
@@ -541,7 +541,7 @@ const category = [
         sku: "BS-156"
     },
     {
-        id: 36,
+        id: 37,
         title: "Moore",
         category: "storage",
         price: 45.00,
@@ -556,7 +556,7 @@ const category = [
         sku: "ST-077"
     },
     {
-        id: 37,
+        id: 38,
         title: "Green Sway",
         category: "textiles",
         price: 2229.00,
@@ -571,7 +571,7 @@ const category = [
         sku: "LT-047"
     },
     {
-        id: 38,
+        id: 39,
         title: "Horse on Courbette",
         category: "lighting",
         price: 945.00,
@@ -586,7 +586,7 @@ const category = [
         sku: "LG-063"
     },
     {
-        id: 39,
+        id: 40,
         title: "Christmas Mouse",
         category: "toys",
         price: 48.00,
@@ -601,7 +601,7 @@ const category = [
         sku: "TS-141"
     },
     {
-        id: 40,
+        id: 41,
         title: "Peonies",
         category: "decor",
         price: 990.00,
@@ -616,7 +616,7 @@ const category = [
         sku: "DR-158"
     },
     {
-        id: 41,
+        id: 42,
         title: "Versante",
         category: "decor",
         price: 210.00,
@@ -631,7 +631,7 @@ const category = [
         sku: "DR-158"
     },
     {
-        id: 42,
+        id: 43,
         title: "Curve",
         category: "chairs",
         price: 320.00,
@@ -646,7 +646,7 @@ const category = [
         sku: "CH-110"
     },
     {
-        id: 43,
+        id: 44,
         title: "Henry",
         category: "tables",
         price: 2090.00,
@@ -661,7 +661,7 @@ const category = [
         sku: "TB-251"
     },
     {
-        id: 44,
+        id: 45,
         title: "Polder",
         category: "sofas",
         price: 1876.00,
@@ -676,7 +676,7 @@ const category = [
         sku: "SO-450"
     },
     {
-        id: 45,
+        id: 46,
         title: "Julep",
         category: "armcahirs",
         price: 620.00,
@@ -690,7 +690,7 @@ const category = [
         description: "The compact and well-proportioned silhouette of both the seats and the small sofa, opens up to a new way of using the dining space: as a living room within the living room, a hybrid situation."
     },
     {
-        id: 46,
+        id: 47,
         title: "Add Look",
         category: "beds",
         price: 1320.00,
@@ -705,7 +705,7 @@ const category = [
         sku: "BS-156"
     },
     {
-        id: 47,
+        id: 48,
         title: "Crossing",
         category: "storage",
         price: 200.00,
@@ -720,7 +720,7 @@ const category = [
         sku: "ST-077"
     },
     {
-        id: 48,
+        id: 49,
         title: "Miha",
         category: "textiles",
         price: 120.00,
@@ -735,7 +735,7 @@ const category = [
         sku: "LT-047"
     },
     {
-        id: 49,
+        id: 50,
         title: "Mademoiselle",
         category: "lighting",
         price: 1100.00,
@@ -750,7 +750,7 @@ const category = [
         sku: "LG-063"
     },
     {
-        id: 50,
+        id: 51,
         title: "Naturofantastic",
         category: "decor",
         price: 899.00,
@@ -765,7 +765,7 @@ const category = [
         sku: "DR-158"
     },
     {
-        id: 51,
+        id: 52,
         title: "Lullaby Elephant",
         category: "toys",
         price: 899.00,

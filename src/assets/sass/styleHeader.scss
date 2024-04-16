@@ -4,7 +4,15 @@ header .search {
     background-color: none !important;
 }
 
-
+.offcanvas-header { 
+    display: inline-block !important;
+}
+.mode-user {
+    margin-left: -10px;
+}
+.login-buttons {
+    margin-left: -10px;
+}
 @media (max-width: 980px) {
    header .woodmart-one {
     display: none;

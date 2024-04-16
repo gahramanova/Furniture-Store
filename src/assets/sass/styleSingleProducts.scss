@@ -1,6 +1,7 @@
-.col-md-4 {
+.first-div {
+    overflow-x: hidden;
     .card-hover {
-        height: 420px;
+        transform: scaleX(1);
         transition: 0.5s;
         overflow: hidden;
         .cart {
@@ -25,7 +26,7 @@
 
         }
         &:hover {
-            height: 470px;
+            
             .cart {
                 .addtocart {
                     width: 70%;

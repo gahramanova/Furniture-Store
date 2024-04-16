@@ -14,7 +14,8 @@ const SingleHomeProducts = ({img1,title,category, price,rating, alldata}) => {
   return (
     <>
     <div className="col col-mb-3 my-3">
-        <div className="card card-hover">
+    <div className='first-div'>
+    <div className="card card-hover">
         <Link to={`/products/${(slug(title))}`} style={{textDecoration: "none", color: "black"}}>
         <img src={img1} className="card-img-middle" alt="..." style={{objectFit: "contain", height: "300px"}}/>
           <div className="card-body">
@@ -35,6 +36,7 @@ const SingleHomeProducts = ({img1,title,category, price,rating, alldata}) => {
             </div>
             
         </div>
+    </div>
 
       </div>
     </>

@@ -20,6 +20,7 @@ const SingleIntrestedCard = ({img1,title,price,category,rating, alldata}) => {
     <>
         
         <div className="col-mb-3 interested">
+          <div className='first-div'>
           <div className="card card-hover">
           <Link to={`/products/${(slug(title))}`} style={{textDecoration: "none"}}>
                 <img src={img1} className="card-img-top" alt="..." style={{objectFit: "contain", height: "300px"}}/>
@@ -40,6 +41,7 @@ const SingleIntrestedCard = ({img1,title,price,category,rating, alldata}) => {
                   </div>
             </div>
 
+          </div>
     </div> 
     </>
   )

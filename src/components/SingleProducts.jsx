@@ -16,6 +16,7 @@ const SingleProducts = ({img1,title,price,category,rating,alldata}) => {
 
 
   <div className="col-12 col-sm-12 col-md-4 my-3">
+    <div className='first-div'>
     <div className="card card-hover">
     <Link to={`/products/${(slug(title))}`} style={{textDecoration: "none"}}>
           <img src={img1} className="card-img-top" alt={title} style={{objectFit: "contain", height: "300px"}}/>
@@ -35,7 +36,7 @@ const SingleProducts = ({img1,title,price,category,rating,alldata}) => {
                <WishBtn product={alldata}/>
             </div>
       </div>
-      
+    </div>
     </div> 
 
   )

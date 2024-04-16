@@ -20,6 +20,7 @@ import slug from "react-slugify"
 import { ProductContext } from "../context/ProductContext"
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
   const [productData] = useContext(ProductContext)
@@ -153,12 +154,12 @@ const Header = () => {
                   <Link to={"/wishlist"} className='btn media' style={{ backgroundColor: "#EFEEEB" }}><i className="fa-regular fa-heart"></i></Link>
 
                   {localStorage.getItem("login") === "true" ?
-                    <NavLink className="media" style={{ textDecoration: "none", color: "black" }} to={"/myprofile"}><i className="fa-solid fa-user mx-2"></i>{t("header-login.2")} {localStorage.getItem("firstname")}
+                    <NavLink className="media" style={{ textDecoration: "none", color: "black" }} to={"/myprofile"}> <FaUserAlt className='dark-mode-logo mx-2'/>{t("header-login.2")} {localStorage.getItem("firstname")}
 
                     </NavLink>
                     :
                     <span className='mx-2'>
-                      <NavLink to={"/login"} className='btn mx-2 my-2' style={{ backgroundColor: "#EFEEEB" }}><i className="fa-regular fa-user mx-2"></i>{t("header-login.0")}</NavLink>
+                      <NavLink to={"/login"} className='btn mx-2 my-2' style={{ backgroundColor: "#EFEEEB" }}> <i className="fa-regular fa-user mx-2"></i>{t("header-login.0")}</NavLink>
                       <NavLink to={"/register"} className="btn" style={{ backgroundColor: "#EFEEEB" }}><i className="fa-regular fa-user mx-2"></i>{t("header-login.1")}</NavLink>
                     </span>
                   }
@@ -216,12 +217,14 @@ const Header = () => {
                 <Link to={"/"}>
                   <img className='logo px-3' src={mode === "light" ? logoDark : logoLight} style={{ width: "200px" }} />
                 </Link>
+     
 
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span className="navbar-toggler-icon" />
-                </button>
-                <div className="collapse navbar-collapse p-3" id="navbarSupportedContent">
-                  <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                  <div>
+                  <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><span className="navbar-toggler-icon" /></button>
+                  <div className="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabIndex={-1} id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div className='d-flex justify-content-between'>
+                    <div className="offcanvas-header">
+                    <ul className="navbar-nav me-auto mb-2">
                     <li className="nav-item">
                       <NavLink to={"/"} className="nav-link link-body-emphasis">{t("header.1")}</NavLink>
                     </li>
@@ -244,27 +247,31 @@ const Header = () => {
                       <NavLink to={"/wishlist"} className="nav-link link-body-emphasis">{t("header.7")}</NavLink>
                     </li>
                   </ul>
-                  <div>
-                    <div>
+
+                  <div className='mode-user'>
+                    <div className='login-buttons'>
 
                       {localStorage.getItem("login") === "true" ?
-                        <NavLink style={{ textDecoration: "none", color: "black" }} to={"/myprofile"}><i className="fa-solid fa-user mx-2"></i>{t("header-login.2")} {localStorage.getItem("firstname")}
+                        <NavLink style={{ textDecoration: "none", color: "black" }} to={"/myprofile"}> 
+                        <FaUserAlt className='dark-mode-logo mx-2'/>
+                        {t("header-login.2")} {localStorage.getItem("firstname")}
 
                         </NavLink>
                         :
                         <span className='mx-2'>
-                          <NavLink to={"/login"} className='btn mx-2 my-2' style={{ backgroundColor: "#EFEEEB" }}><i className="fa-regular fa-user mx-2"></i>{t("header-login.0")}</NavLink>
-                          <NavLink to={"/register"} className="btn" style={{ backgroundColor: "#EFEEEB" }}><i className="fa-regular fa-user mx-2"></i>{t("header-login.1")}</NavLink>
+                          <NavLink to={"/login"} className='btn mx-2 my-2' style={{ backgroundColor: "#EFEEEB" }}> <i className="fa-regular fa-user mx-2"></i>{t("header-login.0")}</NavLink>
+                          <NavLink to={"/register"} className="btn" style={{ backgroundColor: "#EFEEEB" }}>
+                            <i className="fa-regular fa-user mx-2"></i>{t("header-login.1")}</NavLink>
                         </span>
                       }
 
                     </div>
                     <div className='login mt-4'>
-                      <button className='btn position-relative' onClick={() => {
+                      <button className='btn position-relative ' onClick={() => {
                         mode === "light" ? setMode("dark") : setMode("light")
                         mode === "light" ? localStorage.setItem("mode", "dark") : localStorage.setItem("mode", "light")
                       }}>
-                        {mode === "light" ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
+                        {mode === "light" ? <MdOutlineLightMode /> : <MdOutlineDarkMode className='dark-mode-logo'/>}
                       </button>
 
                       <Select
@@ -284,6 +291,12 @@ const Header = () => {
                           },
                         ]}
                       />
+                    </div>
+                  </div>
+                    </div>
+                    <div className=''>
+                     <button type="button" className="btn-close my-3 mx-3" data-bs-dismiss="offcanvas" aria-label="Close" />
+                     </div>
                     </div>
                   </div>
                 </div>

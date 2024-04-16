@@ -54,10 +54,10 @@ const Home = () => {
   };
 
   const [productData] = useContext(ProductContext)
-  const toggleLang =(lang)=> {
+  const toggleLang = (lang) => {
     i18n.changeLanguage(lang)
   }
-  const {t} = useTranslation()
+  const { t } = useTranslation()
   return (
     <>
       <section className="section1">
@@ -115,9 +115,9 @@ const Home = () => {
 
       {/* Our Categories ==================================================================================================*/}
       <section className="my-5 mx-5 home-section">
-        <h2 className="fw-bold">{t("home-section-one.0")}</h2>
-        <p>{t("home-section-one.1")}</p>
         <div className="container">
+          <h2 className="fw-bold">{t("home-section-one.0")}</h2>
+          <p>{t("home-section-one.1")}</p>
           <div className="row row-cols-2 row-cols-md-5 g-4">
             <div className="col mb-3">
               <NavLink to={"/products"}>
@@ -223,9 +223,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="my-5 mx-5 section2">
-        <h2 className="fw-bold">{t("home-section-one.12")}</h2>
-        <div className='container my-5'>
+      <section className="section2">
+        <div className='container'>
+          <h2 className="fw-bold mb-4">{t("home-section-one.12")}</h2>
           <div className='row row-cols-2 row-cols-md-5 g-4'>
             {productData.slice(35, 45).map(item => (
               <SingleHomeProducts
@@ -241,11 +241,30 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="section2-responsive">
+        <div className='container'>
+          <h2 className="fw-bold mb-4">{t("home-section-one.12")}</h2>
+          <div className='row g-4'>
+           <div className="col-12 col-sm-6">
+             {productData.slice(35, 45).map(item => (
+              <SingleHomeProducts
+                id={item.id}
+                title={item.title}
+                img1={item.img[0]}
+                price={item.price}
+                category={item.category}
+                rating={item.rating}
+                alldata={item}
+              />
+            ))}
+           </div>
+          </div>
+        </div>
+      </section>
 
-
-      <section className="section3 my-5 mx-5">
-        <h2 className="fw-bold">{t("home-section-one.14")}</h2>
+      <section className="section3">
         <div className="container my-5">
+          <h2 className="fw-bold mb-4">{t("home-section-one.14")}</h2>
           <div className="row row-cols-1 row-cols-md-5 g-4">
             <div className="col col-mb-3">
               <NavLink to={"/shop"}>
@@ -321,63 +340,68 @@ const Home = () => {
         </div>
       </section>
 
-     <section className="section5 mx-5 my-5">
-        <h2 className="fw-bold">{t("home-section-one.15")}</h2>
-        <p style={{ color: "#ccc" }}>{t("home-section-one.16")}</p>
-        <div className="container d-flex align-items-lg-end">
-          <div className="col-sm-6 col-md-8 col-lg-8 mx-4">
-            <div className='row g-4' style={{ order: 1 }}>
-              {productData.slice(1, 4).map(item => (
-                <SingleHomeProducts
-                  id={item.id}
-                  title={item.title}
-                  img1={item.img[0]}
-                  price={item.price}
-                  category={item.category}
-                  rating={item.rating}
-                  alldata={item}
-                />
-              ))}
+  <section className="section5">
+  <div className="container">
+    <h2 className="fw-bold">{t("home-section-one.15")}</h2>
+    <p style={{ color: "#ccc" }}>{t("home-section-one.16")}</p>
+    <div className="row">
+      <div className="col-sm-6 col-md-7 col-lg-8">
+        <div className="row">
+          {productData.slice(1, 4).map(item => (
+            <div className="col-12 col-sm-6 col-md-4">
+              <SingleHomeProducts
+                id={item.id}
+                title={item.title}
+                img1={item.img[0]}
+                price={item.price}
+                category={item.category}
+                rating={item.rating}
+                alldata={item}
+              />
             </div>
-          </div>
-          <div className="col-sm-6 col-md-5 col-lg-4">
-            <img className="lazy" src={lazy} style={{ width: "100%", height: "540px", borderRadius: "15px", order: "2" }} />
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
+      <div className="col-sm-6 col-md-5 col-lg-4">
+        <img className="lazy" src={lazy} style={{ width: "100%", height: "540px", borderRadius: "15px" }} />
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 
       <section className="section6 mx-5 my-5">
-      <h2 className="fw-bold">{t("home-section-one.17")}</h2>
         <div className="container">
+          <h2 className="fw-bold">{t("home-section-one.17")}</h2>
           <div className="row">
             <div className="col-sm-12 col-md-5 d-flex flex-column">
-              <img src={furniture} style={{width: "100%"}}/>
+              <img src={furniture} style={{ width: "100%" }} />
             </div>
             <div className="col-sm-12 col-md-7">
-                    <h5 className="fw-bold">{t("home-section-one.18")}</h5>
-                    <p style={{ color: "#727272" }}>{t("home-section-one.19")}</p>
-                    <ul>
-                      <li style={{ color: "#727272" }}>{t("home-section-one.20")}</li>
-                      <li style={{ color: "#727272" }}>{t("home-section-one.21")}</li>
-                      <li style={{ color: "#727272" }}>{t("home-section-one.22")}</li>
-                    </ul>
-                    <div className="photo d-flex">
-                    <img className="video-photo" src={videoPhoto} style={{ width: "100%" }} />
-                      <div className="content">
-                        <h6 className="text-title">{t("home-section-one.23")}</h6>
-                        <h3 className="text-title">{t("home-section-one.24")}</h3>
-                      </div>
-                    </div>
+              <h5 className="fw-bold">{t("home-section-one.18")}</h5>
+              <p style={{ color: "#727272" }}>{t("home-section-one.19")}</p>
+              <ul>
+                <li style={{ color: "#727272" }}>{t("home-section-one.20")}</li>
+                <li style={{ color: "#727272" }}>{t("home-section-one.21")}</li>
+                <li style={{ color: "#727272" }}>{t("home-section-one.22")}</li>
+              </ul>
+              <div className="photo d-flex">
+                <img className="video-photo" src={videoPhoto} style={{ width: "100%" }} />
+                <div className="content">
+                  <h6 className="text-title">{t("home-section-one.23")}</h6>
+                  <h3 className="text-title">{t("home-section-one.24")}</h3>
                 </div>
+              </div>
+            </div>
           </div>
         </div>
-</section>
+      </section>
 
       <section className="section7 my-5 mx-5" style={{ height: "50vh" }}>
-        <h2 className="fw-bold">Lastest articles</h2>
         <div className="container">
+          <h2 className="fw-bold">Lastest articles</h2>
 
         </div>
       </section>

@@ -24,6 +24,7 @@ import BlogDetails from '../pages/BlogDetails'
 import EditBlog from '../pages/admin/update/EditBlog'
 import Description from '../components/Description'
 import NotFound from '../pages/NotFound'
+import TopToBtn from '../components/TopToScroll/TopToBtn'
 
 
 
@@ -34,6 +35,7 @@ const AppRouter = () => {
     <>
     <BrowserRouter>
       <div className={mode}>
+        <TopToBtn/>
       <Header/>
     <Routes>
       <Route path='/' element={<Home/>}></Route>

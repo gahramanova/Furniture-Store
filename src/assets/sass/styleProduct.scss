@@ -19,6 +19,33 @@
 
 }
 .sidebar {
-    background-color: red;
-    height: 70vh;
+    background-color: white;
+    height: 100%;
+    border-radius: 20px;
+    padding: 25px 17px 0px 17px;
+
+    .filter-by-categories {
+        border-top: 1px solid #ccc;
+        margin-bottom: 20px;
+        .radio-form {
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        .radio-group {
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        .radio-button {
+            margin-top: 10px;
+            &:hover
+            {
+                 color: #F59A57;
+                transition: 0.4s;
+            }
+        }
+    }
+    .other-filter-methods {
+        border-top: 1px solid #ccc;
+    }
+
 }

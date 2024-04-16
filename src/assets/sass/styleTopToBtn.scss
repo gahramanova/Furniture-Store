@@ -1,0 +1,15 @@
+.scroll-icon {
+    background-color: #F59A57;
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    border: none;
+    background: #FBFAF7;
+    border-radius: 50%;
+    color: #F59A57;
+}
+.scroll-icon:hover {
+    background-color: #F59A57;
+    color: white;
+    transition: ease-in 0.5s;
+}
