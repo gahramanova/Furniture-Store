@@ -15,7 +15,7 @@ const SingleProducts = ({img1,title,price,category,rating,alldata}) => {
 
 
 
-  <div className="col-12 col-sm-12 col-md-4 my-3">
+  <div className="col-6 col-sm-6 col-md-4 my-3">
     <div className='first-div'>
     <div className="card card-hover">
     <Link to={`/products/${(slug(title))}`} style={{textDecoration: "none"}}>
