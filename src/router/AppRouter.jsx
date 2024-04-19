@@ -25,6 +25,7 @@ import EditBlog from '../pages/admin/update/EditBlog'
 import Description from '../components/Description'
 import NotFound from '../pages/NotFound'
 import TopToBtn from '../components/TopToScroll/TopToBtn'
+import Checkout from '../pages/Checkout'
 
 
 
@@ -57,6 +58,7 @@ const AppRouter = () => {
       <Route path="/dashboard/edit/:url" element={<EditBlog/>}/>
       <Route path="/myprofile" element={<Myprofile/>}/>
       <Route path="/faq" element={<FAQ/>}/>
+      <Route path="/checkout" element={<Checkout/>}/>
       <Route path="*" element={<NotFound/>}/>
       
     </Routes>

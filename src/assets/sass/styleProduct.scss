@@ -76,3 +76,18 @@
         display: none;
     }
 }
+
+:where(.css-dev-only-do-not-override-usln0u).ant-slider .ant-slider-track {
+    background-color: #F59A57 !important;
+    border-radius: 2px !important;
+}
+:where(.css-dev-only-do-not-override-usln0u).ant-slider .ant-slider-handle::after {
+    box-shadow: 0 0 2px #F59A57 !important;
+}
+:where(.css-dev-only-do-not-override-usln0u).ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+    border-color: #F59A57 !important;
+    background-color: #F59A57 !important;
+}
+:where(.css-dev-only-do-not-override-usln0u).ant-slider .ant-slider-handle:focus::after {
+    box-shadow: #F59A57 !important;
+}

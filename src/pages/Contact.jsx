@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import contactImageOne from "../assets/img/contact-image-1.png"
 import contactImageTwo from "../assets/img/contact-image-2.png"
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import Aos from "aos";
+import "aos/dist/aos.css"; 
+
 const Contact = () => {
+  useEffect(() => {
+    Aos.init();
+}, []);
   const {t} = useTranslation()
   return (
     <>
@@ -20,7 +26,7 @@ const Contact = () => {
         <div className='row'>
           <div className='col-12 col-sm-6'>
             <div className='d-flex'>
-              <div><img src={contactImageOne} style={{width: "100%"}}/></div>
+              <div data-aos="flip-left"><img src={contactImageOne} style={{width: "100%"}}/></div>
               <div className='d-flex flex-column text-area justify-content-center'>
               <ul>
                   <li><h2 className='fw-bold'>{t("contact.1")}</h2></li>
@@ -35,7 +41,7 @@ const Contact = () => {
           </div>
           <div className='col-12 col-sm-6 section-contact-second'>
           <div className='d-flex'>
-              <div><img src={contactImageTwo} style={{width: "100%"}}/></div>
+              <div  data-aos="flip-right"><img src={contactImageTwo} style={{width: "100%"}}/></div>
               <div className='d-flex flex-column text-area justify-content-center'>
                 <ul>
                   <li><h2 className='fw-bold'>{t("contact.3")}</h2></li>
@@ -52,7 +58,7 @@ const Contact = () => {
       </div>
     </section>
     <section className='mx-5 my-5 section-contact-second'>
-      <div className='container my-4'>
+      <div className='container my-4' data-aos="fade-right">
         <div className='row'>
           <div className='col-12 col-sm-6'>
           <h3 className='fw-bold'>{t("contact.5")}</h3>

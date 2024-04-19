@@ -94,7 +94,7 @@ const Header = () => {
                   <input type="text" className="form-control px-3 py-2  search" placeholder={t("header.0")} data-bs-toggle="modal" data-bs-target="#exampleModal" />
                 </div>
 
-                <Modal show={show} onHide={handleClose}>
+                <Modal size='xl' show={show} onHide={handleClose}>
                   <Modal.Header closeButton>
                     <Modal.Title>Search area</Modal.Title>
                   </Modal.Header>

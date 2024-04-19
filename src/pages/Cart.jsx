@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SingleInterestedCard from "../components/SingleIntrestedCard"
 import { ProductContext } from "../context/ProductContext";
+import swal from 'sweetalert'
+
 
 
 const Cart = () => {
@@ -43,7 +45,12 @@ const Cart = () => {
                         <p className='fw-bold' style={{ color: "#F59A57" }}>{item.price * item.quantity}$</p>
                       </div>
                       <div className='d-flex mx-4 align-items-center'>
-                        <button onClick={() => removeItem(item.id)} className='btn-remove'><MdDeleteOutline /></button>
+                        <button onClick={() => {
+                           removeItem(item.id)
+                           swal("Remove product!", "You clicked the button!", "success")
+                        }
+                          } className='btn-remove'><MdDeleteOutline />
+                          </button>
                       </div>
                     </div>
                   </div>
@@ -96,20 +103,7 @@ const Cart = () => {
                     <h3 className='price' style={{ color: "#F59A57" }}>{cartTotal}$</h3>
                   </div>
                 </div>
-                {/* <div className='mt-4 payment'>
-                  <div className='content-one'>
-                    <h5 className='fw-bold dark-text'>Payments Methods</h5>
-                    <img src="https://woodmart.xtemos.com/furniture2/wp-content/uploads/sites/11/2023/04/payment-methods.jpg.webp" style={{ width: "100%", height: "27px" }} />
-                  </div>
-                  <div className='content-two mt-5 m-3'>
-                    <h5 className='fw-bold dark-text'>Delivery Information:</h5>
-                    <p style={{ color: "#ccc" }}>Although we don’t think you’ll ever want one, we’ll gladly provide a refund if it’s requested within 14 days of purchase.</p>
-                  </div>
-                  <div className='content-three mt-5 m-3'>
-                    <h5 className='fw-bold dark-text'>14 Days Information:</h5>
-                    <p style={{ color: "#ccc" }}>Although we don’t think you’ll ever want one, we’ll gladly provide a refund if it’s requested within 14 days of purchase.</p>
-                  </div>
-                </div> */}
+                <Link to={"/checkout"} className="btn btn-dark btn-lg px-4 me-md-2 mt-4">Buy now</Link>
               </div>
             </div>
           </div>

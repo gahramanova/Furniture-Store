@@ -1,12 +1,11 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { ProductContext } from '../context/ProductContext'
 import SingleProducts from '../components/SingleProducts'
 import { useTranslation } from 'react-i18next';
-import { Radio, Slider, Select } from 'antd';
+import { Radio, Slider } from 'antd';
+import { Pagination } from 'antd';
 
 const Products = () => {
-
-  
   const [productData] = useContext(ProductContext)
   const [category, setCategory] = useState("")
   const [price, setPrice] = useState({
@@ -30,25 +29,34 @@ const Products = () => {
 
 
 
+  const [state, setState] = useState(productData)
   const { t } = useTranslation()
 
-  const filteredPrice = productData.filter(item => item.price >= price.minPrice && item.price <= price.maxPrice)
-  const filteredData = category === "alldata" ? filteredPrice : filteredPrice.filter(item => item.category === category)
+  const filteredPrice =  productData.filter(item => item.price >= price.minPrice && item.price <= price.maxPrice)
+  const filteredData = category === "" ? filteredPrice : filteredPrice.filter(item => item.category === category)
 
-  const [state, setState] = useState(filteredData)
-  const sortProducts = (value) => {
-    if (value == "all") {
-      setState(filteredData)
-      return;
-    }
-    else if (value == "low-to-high") {
-      let copy = [...state]
-      const sortedProducts = copy.sort((a, b) => a.price - b.price)
-      setState(sortedProducts)
-    }
-  }
+  // const sortProducts = (value) => {
+  //   if (value == "all") {
+  //     setState(filteredData)
+  //     return;
+  //   }
+  //   else if (value == "low-to-high") {
+  //     let copy = [...state]
+  //     const sortedProducts = copy.sort((a, b) => a.price - b.price)
+  //     setState(sortedProducts)
+  //   }
+  // }
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage, setPostPerPage] = useState(12)
 
+  const lastPostIndex = currentPage * postPerPage
+  const firstPostIndex = lastPostIndex - postPerPage
+
+  const currentPost = filteredData.slice(firstPostIndex, lastPostIndex)
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+};
   return (
     <>
       <section className='section-products'>
@@ -84,7 +92,7 @@ const Products = () => {
                 <h5 className='fw-bold mt-4' style={{ color: "#F59A57" }}>Filter by categories</h5>
                 <form className='radio-form'>
                   <Radio.Group onChange={(e) => setCategory(e.target.value)} value={category} className='radio-group'>
-                    <Radio value="alldata" className='radio-button'><h6 className='fw-bold'>All</h6></Radio>
+                    <Radio value="" className='radio-button'><h6 className='fw-bold'>All</h6></Radio>
                     <Radio value="chairs" className='radio-button'><h6 className='fw-bold'>Chairs</h6></Radio>
                     <Radio value="tables" className='radio-button'><h6 className='fw-bold'>Tables</h6></Radio>
                     <Radio value="sofas" className='radio-button'><h6 className='fw-bold'>Sofas</h6></Radio>
@@ -113,7 +121,7 @@ const Products = () => {
             </div>
           </div>
           <div className="col-12 col-sm-12 col-md-8">
-            <div className='select d-flex justify-content-end'>
+            {/* <div className='select d-flex justify-content-end'>
               <Select
                 defaultValue="All"
                 style={{ width: 150 }}
@@ -142,9 +150,9 @@ const Products = () => {
                   },
                 ]}
               />
-            </div>
+            </div> */}
             <div className='row'>
-              {filteredData.map(item => (
+              {currentPost.map(item => (
                 <SingleProducts
                   key={item.id}
                   id={item.id}
@@ -160,6 +168,10 @@ const Products = () => {
                   alldata={item}
                 />
               ))}
+              
+              <Pagination className='pagination' defaultCurrent={1} total={productData.length} postPerPage={postPerPage} 
+              setCurrentPage={setCurrentPage} onChange={handlePageChange}/>
+
             </div>
 
           </div>

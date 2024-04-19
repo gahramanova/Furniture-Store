@@ -18,7 +18,7 @@ import slider2 from "../assets/img/slider2.png"
 import slider3 from "../assets/img/slider3.png"
 import { NavLink } from "react-router-dom";
 import SingleHomeProducts from "../components/SingleHomeProducts";
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { ProductContext } from '../context/ProductContext'
 import cardLogoOne from "../assets/img/cardLogoOne.png"
 import cardLogoTwo from "../assets/img/cardLogoTwo.png"
@@ -36,8 +36,15 @@ import videoPhoto from "../assets/img/video-photo.jpg"
 import i18n from '../i18n/i18next';
 import { useTranslation } from 'react-i18next';
 import parse from 'html-react-parser';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  
+  useEffect(() => {
+    Aos.init();
+}, []);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -224,7 +231,7 @@ const Home = () => {
       </section>
 
       <section className="section2">
-        <div className='container'>
+        <div className='container' >
           <h2 className="fw-bold mb-4">{t("home-section-one.12")}</h2>
           <div className='row row-cols-2 row-cols-md-5 g-4'>
             {productData.slice(35, 45).map(item => (
@@ -263,11 +270,11 @@ const Home = () => {
       </section>
 
       <section className="section3">
-        <div className="container my-5">
+        <div className="container my-5" >
           <h2 className="fw-bold mb-4">{t("home-section-one.14")}</h2>
           <div className="row row-cols-1 row-cols-md-5 g-4">
             <div className="col col-mb-3">
-              <NavLink to={"/shop"}>
+              <NavLink to={"/products"}>
                 <div className="card">
                   <img src={ellitis} className="card-img-bottom" alt="..." />
                   <div className="card-body ">
@@ -281,7 +288,7 @@ const Home = () => {
               </NavLink>
             </div>
             <div className="col col-mb-3">
-              <NavLink to={"/shop"}>
+              <NavLink to={"/products"}>
                 <div className="card">
                   <img src={hay} className="card-img-bottom" alt="..." />
                   <div className="card-body">
@@ -295,7 +302,7 @@ const Home = () => {
               </NavLink>
             </div>
             <div className="col col-mb-3">
-              <NavLink to={"/shop"}>
+              <NavLink to={"/products"}>
                 <div className="card">
                   <img src={kettal} className="card-img-bottom" alt="..." />
                   <div className="card-body">
@@ -309,7 +316,7 @@ const Home = () => {
               </NavLink>
             </div>
             <div className="col col-mb-3">
-              <NavLink to={"/shop"}>
+              <NavLink to={"/products"}>
                 <div className="card">
                   <img src={lladro} className="card-img-bottom" alt="..." />
                   <div className="card-body">
@@ -323,7 +330,7 @@ const Home = () => {
               </NavLink>
             </div>
             <div className="col col-mb-3">
-              <NavLink to={"/shop"}></NavLink>
+              <NavLink to={"/products"}></NavLink>
               <div className="card">
                 <img src={poliform} className="card-img-bottom" alt="..." />
                 <div className="card-body">
@@ -373,13 +380,13 @@ const Home = () => {
 
 
       <section className="section6 mx-5 my-5">
-        <div className="container">
+        <div className="container" >
           <h2 className="fw-bold">{t("home-section-one.17")}</h2>
           <div className="row">
-            <div className="col-sm-12 col-md-5 d-flex flex-column">
+            <div className="col-sm-12 col-md-5 d-flex flex-column" >
               <img src={furniture} style={{ width: "100%" }} />
             </div>
-            <div className="col-sm-12 col-md-7">
+            <div className="col-sm-12 col-md-7" >
               <h5 className="fw-bold">{t("home-section-one.18")}</h5>
               <p style={{ color: "#727272" }}>{t("home-section-one.19")}</p>
               <ul>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import coverphoto from "../assets/img/about-coverphoto.jpg"
 import aboutOne from "../assets/img/about-1.webp"
 import aboutTwo from "../assets/img/about-2.webp"
@@ -13,7 +13,14 @@ import aboutvideo from "../assets/img/aboutus-video.jpg"
 import i18n from '../i18n/i18next';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink } from 'react-router-dom'
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const About = () => {
+  useEffect(() => {
+    Aos.init();
+}, []);
+
   const toggleLang =(lang)=> {
     i18n.changeLanguage(lang)
   }
@@ -32,7 +39,7 @@ const About = () => {
     <section className='about-section1'>
         <div className="container col-xxl-12 ">
         <div className="row flex-lg-row align-items-center g-5 py-5">
-          <div className="col-10 col-sm-8 col-lg-9 d-flex">
+          <div className="col-10 col-sm-8 col-lg-9 d-flex"  data-aos="fade-right">
             <div className='col-md-6 col-sm-6'>
               <img src={aboutOne}  style={{objectFit: "contain", height: "100%", width: "100%"}}/>
             </div>
@@ -40,7 +47,7 @@ const About = () => {
               <img src={aboutTwo}  style={{objectFit: "contain", height: "100%", width: "100%"}} className='mx-2'/>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3" data-aos="fade-left">
             <h1 className="fw-bold lh-1 mb-3">{t("about.1")}</h1>
             <p style={{color:"#ccc"}}>{t("about.2")}</p>
             <p style={{color:"#ccc"}}>Dictumst per ante cras suscipit nascetur ullamcorper in nullam fermentum condimentum torquent iaculis reden posuere potenti viverra condimentum dictumst id tellus suspendisse convallis condimentum.</p>
@@ -54,7 +61,7 @@ const About = () => {
 
     <section className='about-section2 my-5 mx-5'>
       <h3 className='fw-bold text-center'>{t("about.3")}</h3>
-      <div className='container mt-5'>
+      <div className='container mt-5' data-aos="zoom-in-down">
         <div className='row'>
           <div className='col-12 col-sm-6 col-md-4'>
             <div className="card  card-member" >

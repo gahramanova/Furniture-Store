@@ -13,6 +13,7 @@
     "@ant-design/icons": "^5.3.6",
     "animate.css": "^4.1.1",
     "antd": "^5.15.3",
+    "aos": "^2.3.4",
     "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
     "flag-icons": "^7.2.0",
@@ -36,6 +37,7 @@
     "redux": "^5.0.1",
     "sass": "^1.71.1",
     "slick-carousel": "^1.8.1",
+    "sweetalert": "^2.1.2",
     "use-font-face-observer": "^1.2.1"
   },
   "devDependencies": {

@@ -1,6 +1,7 @@
-.col-md-3 {
+.first-div{
+    overflow-x: hidden;
     .card-hover{
-        height: 420px;
+       transform: translateX(1);
         transition: 0.5s;
         overflow: hidden;
         .cart {

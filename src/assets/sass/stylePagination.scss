@@ -1,0 +1,8 @@
+.pagination {
+    display: flex;
+    align-items: center;
+}
+
+:where(.css-dev-only-do-not-override-usln0u).ant-pagination .ant-pagination-item-active {
+    border-color: #F59A57 !important;
+}

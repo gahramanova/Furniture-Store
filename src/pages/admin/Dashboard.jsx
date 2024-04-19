@@ -30,7 +30,7 @@ const Dashboard = () => {
         {blogs.map((item,c)=> (
              <tr key={c}>    
              <th scope="row">{c+1}</th>
-             <td><img src={item.img} width={"100px"}/></td>
+             <td><img src={item.img[0]} width={"100px"}/></td>
              <td>{item.title}</td>
              <td>{item.date}</td>
              <td><Link to={`/dashboard/edit/${slugify(item.title)}`} className='btn edit'>Edit</Link></td>

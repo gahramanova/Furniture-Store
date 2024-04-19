@@ -103,7 +103,21 @@
     }
 }
 
+
 @media (max-width: 980px) {
+    .section1 {
+        .slider {
+            img {
+                background-position: center;
+                background-size: cover !important;
+            }
+            .content {
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+    }
     
     .section2 {
         display: none;

@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import slug from "react-slugify"
 import { useCart } from 'react-use-cart';
 import WishBtn from './WishBtn';
+import swal from 'sweetalert'
 
 
 const SingleProducts = ({img1,title,price,category,rating,alldata}) => {
@@ -30,7 +31,15 @@ const SingleProducts = ({img1,title,price,category,rating,alldata}) => {
           </div>
           </Link>
           <div className='cart d-flex justify-content-around'>
-                <button onClick={()=>{localStorage.getItem("login")=== ("true")?addItem(alldata):navigate("/login")}} className="addtocart">
+                <button onClick={()=>{
+                  if (localStorage.getItem("login") === "true") {
+                    addItem(alldata)
+                    swal("Add to cart!", "You clicked the button!", "success");
+                  } else {
+                    navigate("/login")
+                  }
+               } }
+                  className="addtocart">
                 {t("home-section-one.13")}
                 </button>
                <WishBtn product={alldata}/>

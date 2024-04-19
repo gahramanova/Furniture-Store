@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import ellitis from "../assets/img/cardLogoOne.png"
 import hay from "../assets/img/cardLogoTwo.png"
 import kettal from "../assets/img/cardLogoThree.png"
@@ -12,7 +12,14 @@ import showroomTorinoTwo from "../assets/img/showroom-torino-2.jpg"
 import showroomTorinoThree from "../assets/img/showroom-torino-3.jpg"
 import i18n from '../i18n/i18next';
 import { useTranslation } from 'react-i18next';
+import Aos from "aos";
+import "aos/dist/aos.css";  
+
+
 const Showrooms = () => {
+  useEffect(() => {
+    Aos.init();
+}, []);
   const toggleLang =(lang)=> {
     i18n.changeLanguage(lang)
   }
@@ -53,18 +60,18 @@ const Showrooms = () => {
                 
             </div>
             <div className='col-12 col-sm-6 col-md-4'>
-            <div className="card  card-member" >
+            <div className="card  card-member" data-aos="flip-up">
               <img src={showroomMilanoOne} className="card-img-top" alt="..." />
             </div>
           </div>
           <div className='col-12 col-sm-6 col-md-4'>
-            <div className="card card-member" >
+            <div className="card card-member" data-aos="flip-up">
               <img src={showroomMilanoTwo} className="card-img-top" alt="..." />
 
             </div>
           </div>
           <div className='col-12 col-sm-6 col-md-4'>
-            <div className="card card-member" >
+            <div className="card card-member" data-aos="flip-up">
               <img src={showroomMilanoThree} className="card-img-top" alt="..." />
             </div>
           </div>
@@ -98,18 +105,18 @@ const Showrooms = () => {
                 
             </div>
             <div className='col-12 col-sm-6 col-md-4'>
-            <div className="card  card-member" >
+            <div className="card  card-member" data-aos="flip-down">
               <img src={showroomTorinoOne} className="card-img-top" alt="..." />
             </div>
           </div>
           <div className='col-12 col-sm-6 col-md-4'>
-            <div className="card card-member" >
+            <div className="card card-member" data-aos="flip-down">
               <img src={showroomTorinoTwo} className="card-img-top" alt="..." />
 
             </div>
           </div>
           <div className='col-12 col-sm-6 col-md-4'>
-            <div className="card card-member" >
+            <div className="card card-member" data-aos="flip-down">
               <img src={showroomTorinoThree} className="card-img-top" alt="..." />
             </div>
           </div>

@@ -6,6 +6,7 @@ import slug from "react-slugify";
 import { useCart } from "react-use-cart";
 import { CiDiscount1 } from "react-icons/ci";
 import SingleInterestedCard from "../components/SingleIntrestedCard"
+import WishBtn from "../components/WishBtn";
 // import OwlCarousel from 'react-owl-carousel';
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -31,16 +32,16 @@ const ProductDetails = () => {
             <div className="col-sm-12 col-lg-8">
             <div className="row g-4">
               <div className="col-sm-12 col-md-6">
-                <img src={dataDetails[0].img[0]} style={{width: "100%"}}/>
+                <img src={dataDetails[0].img[0]} style={{width: "100%"}} className="detailsphoto"/>
               </div>
               <div className="col-sm-12 col-md-6">
-                <img src={dataDetails[0].img[1]} style={{width: "100%"}}/>
+                <img src={dataDetails[0].img[1]} style={{width: "100%"}}  className="detailsphoto"/>
               </div>
               <div className="col-sm-12 col-md-6">
-                <img src={dataDetails[0].img[2]} style={{width: "100%"}}/>
+                <img src={dataDetails[0].img[2]} style={{width: "100%"}}  className="detailsphoto"/>
               </div>
               <div className="col-sm-12 col-md-6">
-                <img src={dataDetails[0].img[3]} style={{width: "100%"}}/>
+                <img src={dataDetails[0].img[3]} style={{width: "100%"}}  className="detailsphoto"/>
               </div>
             </div>
             </div>
@@ -64,7 +65,13 @@ const ProductDetails = () => {
                   className="btn btn-lg px-4 me-md-2 addtocart"
                 >Add to cart
                 </Link>
-              <Link to={"/products"} className="btn btn-lg px-4 me-md-2 goback">Go back</Link>
+                <Link onClick={()=> {addItem(dataDetails[0])}} to={"/checkout"} className="btn btn-lg px-4 me-md-2 goback">Buy now</Link>
+
+             </div>
+             <div className="d-flex mt-3">           
+             </div>
+             <div>
+             
              </div>
               
              

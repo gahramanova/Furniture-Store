@@ -29,7 +29,14 @@ const SingleHomeProducts = ({img1,title,category, price,rating, alldata}) => {
             </Link>
           
             <div className='cart d-flex justify-content-around'>
-                <button onClick={()=>{localStorage.getItem("login")=== ("true")?addItem(alldata):navigate("/login")}} className="addtocart">
+                <button onClick={()=>{
+                  if (localStorage.getItem("login") === "true") {
+                    addItem(alldata)
+                    swal("Add to cart!", "You clicked the button!", "success");
+                  } else {
+                    navigate("/login")
+                  }
+                  }} className="addtocart">
                 {t("home-section-one.13")}
                 </button>
                <WishBtn product={alldata}/>

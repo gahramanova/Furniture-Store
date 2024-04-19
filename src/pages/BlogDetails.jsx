@@ -47,6 +47,7 @@ const BlogDetails = () => {
 
       </div>
       <div className='container'>
+        <h3 className='fw-bold'>You May be Interested In...</h3>
       <div className='row row-cols-2 row-cols-md-5 g-4 my-3'>
         {productData.slice(42,47).map(item=> (
           <SingleInterestedCard
