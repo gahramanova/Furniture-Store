@@ -6,9 +6,11 @@ import { useCart } from 'react-use-cart';
 import { useTranslation } from 'react-i18next';
 import WishBtn from '../components/WishBtn';
 import SingleProducts from '../components/SingleProducts';
+import Rating from '../components/Rating';
 
 const Wishlist = () => {
-  const { items, updateWishlistMetadata } = useWishlist();
+  const { items, 
+  totalWishlistItems } = useWishlist();
   const { t } = useTranslation();
   const { addItem } = useCart();
   const navigate = useNavigate();
@@ -34,7 +36,7 @@ const Wishlist = () => {
                     <div className="card-body">
                       <div className='d-flex justify-content-between'>
                         <p className="card-title fw-bold" style={{ color: "black" }}>{item.title}</p>
-                        <p style={{ color: "black" }}>{item.rating}<i className="fa-solid fa-star" style={{ color: "#EABE12" }}></i></p>
+                        <Rating value={item.rating} color={"#EABE12"}/>
                       </div>
                       <p style={{ color: "#ABA5A5" }} className="card-title">{item.category}</p>
                       <p style={{ color: "#F59A57" }} className='card-title fw-bold'>{item.price}$</p>

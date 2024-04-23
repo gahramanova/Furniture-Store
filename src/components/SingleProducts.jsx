@@ -5,6 +5,7 @@ import slug from "react-slugify"
 import { useCart } from 'react-use-cart';
 import WishBtn from './WishBtn';
 import swal from 'sweetalert'
+import Rating from './Rating';
 
 
 const SingleProducts = ({img1,title,price,category,rating,alldata}) => {
@@ -24,7 +25,7 @@ const SingleProducts = ({img1,title,price,category,rating,alldata}) => {
           <div className="card-body">
           <div className='d-flex justify-content-between'>
                 <p className="card-title fw-bold" style={{color: "black"}}>{title}</p> 
-                <p style={{color: "black"}}>{rating}<i class="fa-solid fa-star" style={{color: "#EABE12"}}></i></p> 
+                <Rating value={rating} color={"#EABE12"}/>
           </div>
             <p style={{color: "#ABA5A5"}} className="card-title">{category}</p>
             <p style={{color: "#F59A57"}} className='card-title fw-bold'>{price}$</p>

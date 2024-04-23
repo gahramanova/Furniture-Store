@@ -572,7 +572,7 @@ const category = [
     },
     {
         id: 39,
-        title: "Horse on Courbette",
+        title: "Horse Courbet",
         category: "lighting",
         price: 945.00,
         img:[
@@ -581,13 +581,13 @@ const category = [
             "https://woodmart.b-cdn.net/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-lighting-prod-13-3.jpg",
             "https://woodmart.b-cdn.net/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-lighting-prod-13-4.jpg"
              ],
-        rating: 5,
+        rating: 4,
         description: "The light, however, is not emitted by a bulb or by an LED board, but by the elements that form the structure of the lampshade. By weaving filaments of light, this unique lamp seamlessly combines.",
         sku: "LG-063"
     },
     {
         id: 40,
-        title: "Christmas Mouse",
+        title: "The Mouse",
         category: "toys",
         price: 48.00,
         img:[
@@ -596,7 +596,7 @@ const category = [
             "https://woodmart.b-cdn.net/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-toys-prod-13-3.jpg",
             "https://woodmart.b-cdn.net/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-toys-prod-13-4.jpg"
              ],
-        rating: 5,
+        rating: 4,
         description: "The light, however, is not emitted by a bulb or by an LED board, but by the elements that form the structure of the lampshade. By weaving filaments of light, this unique lamp seamlessly combines.",
         sku: "TS-141"
     },
@@ -611,7 +611,7 @@ const category = [
             "https://woodmart.b-cdn.net/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-decor-prod-11-3.jpg",
             "https://woodmart.b-cdn.net/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-decor-prod-11-4.jpg"
              ],
-        rating: 5,
+        rating: 4.5,
         description: "The light, however, is not emitted by a bulb or by an LED board, but by the elements that form the structure of the lampshade. By weaving filaments of light, this unique lamp seamlessly combines.",
         sku: "DR-158"
     },

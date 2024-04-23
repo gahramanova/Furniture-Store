@@ -6,6 +6,7 @@ import i18n from '../i18n/i18next';
 import { useTranslation } from 'react-i18next'
 import WishBtn from './WishBtn';
 import { useCart } from 'react-use-cart';
+import Rating from './Rating';
 
 
 
@@ -27,7 +28,7 @@ const SingleIntrestedCard = ({ img1, title, price, category, rating, alldata }) 
               <div className="card-body">
                 <div className='d-flex justify-content-between'>
                   <p className="card-title fw-bold" style={{ color: "black" }}>{title}</p>
-                  <p style={{ color: "black" }}>{rating}<i class="fa-solid fa-star" style={{ color: "#EABE12" }}></i></p>
+                  <Rating value={rating} color={"#EABE12"}/>
                 </div>
                 <p style={{ color: "#ABA5A5" }} className="card-title">{category}</p>
                 <p style={{ color: "#F59A57" }} className='card-title fw-bold'>{price}$</p>

@@ -6,6 +6,8 @@ import SingleInterestedCard from "../components/SingleIntrestedCard"
 import { ProductContext } from "../context/ProductContext";
 import { useCart } from "react-use-cart";
 import slug from "react-slugify";
+import { useTranslation } from 'react-i18next';
+
 
 
 const BlogDetails = () => {
@@ -13,6 +15,7 @@ const BlogDetails = () => {
   const { url } = useParams()
   const blogDetails = blogs.filter(p => slugify(p.title) === url)
   const [productData] = useContext(ProductContext);
+  const { t } = useTranslation()
 
   const { addItem } = useCart();
   const navigate = useNavigate();
@@ -47,7 +50,7 @@ const BlogDetails = () => {
 
       </div>
       <div className='container'>
-        <h3 className='fw-bold'>You May be Interested In...</h3>
+        <h3 className='fw-bold'>{t("cart.12")}</h3>
       <div className='row row-cols-2 row-cols-md-5 g-4 my-3'>
         {productData.slice(42,47).map(item=> (
           <SingleInterestedCard

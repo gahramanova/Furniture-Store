@@ -2,8 +2,10 @@ import React, { useContext, useState, useEffect } from 'react'
 import { ProductContext } from '../context/ProductContext'
 import SingleProducts from '../components/SingleProducts'
 import { useTranslation } from 'react-i18next';
-import { Radio, Slider } from 'antd';
+import { Radio, Select, Slider } from 'antd';
 import { Pagination } from 'antd';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Products = () => {
   const [productData] = useContext(ProductContext)
@@ -28,6 +30,10 @@ const Products = () => {
   };
 
 
+  useEffect(() => {
+    Aos.init();
+}, []);
+
 
   const [state, setState] = useState(productData)
   const { t } = useTranslation()
@@ -35,17 +41,17 @@ const Products = () => {
   const filteredPrice =  productData.filter(item => item.price >= price.minPrice && item.price <= price.maxPrice)
   const filteredData = category === "" ? filteredPrice : filteredPrice.filter(item => item.category === category)
 
-  // const sortProducts = (value) => {
-  //   if (value == "all") {
-  //     setState(filteredData)
-  //     return;
-  //   }
-  //   else if (value == "low-to-high") {
-  //     let copy = [...state]
-  //     const sortedProducts = copy.sort((a, b) => a.price - b.price)
-  //     setState(sortedProducts)
-  //   }
-  // }
+  const sortProducts = (value) => {
+    if (value == "all") {
+      setState(filteredData)
+      return;
+    }
+    else if (value == "low-to-high") {
+      let copy = [...state]
+      const sortedProducts = copy.sort((a, b) => a.price - b.price)
+      setState(sortedProducts)
+    }
+  }
 
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(12)
@@ -69,7 +75,7 @@ const Products = () => {
 
       <div className='container mx-3 my-2 section-one'>
         <div className="row">
-          <div className="col-12 col-sm-12 col-md-4">
+          <div className="col-12 col-sm-12 col-md-4" data-aos="fade-right">
             <div className='sidebar mt-3'>
               <div className='filter-by-price'>
                 <h5 className='fw-bold' style={{ color: "#F59A57" }}>Filter by Price</h5>
@@ -120,8 +126,8 @@ const Products = () => {
 
             </div>
           </div>
-          <div className="col-12 col-sm-12 col-md-8">
-            {/* <div className='select d-flex justify-content-end'>
+          <div className="col-12 col-sm-12 col-md-8" data-aos="fade-left">
+            <div className='select d-flex justify-content-end'>
               <Select
                 defaultValue="All"
                 style={{ width: 150 }}
@@ -150,7 +156,7 @@ const Products = () => {
                   },
                 ]}
               />
-            </div> */}
+            </div>
             <div className='row'>
               {currentPost.map(item => (
                 <SingleProducts

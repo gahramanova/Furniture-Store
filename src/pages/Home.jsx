@@ -16,7 +16,7 @@ import tables from "../assets/img/category-tables.webp"
 import slider1 from "../assets/img/slider1.png"
 import slider2 from "../assets/img/slider2.png"
 import slider3 from "../assets/img/slider3.png"
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import SingleHomeProducts from "../components/SingleHomeProducts";
 import { useContext, useEffect } from 'react'
 import { ProductContext } from '../context/ProductContext'
@@ -38,12 +38,16 @@ import { useTranslation } from 'react-i18next';
 import parse from 'html-react-parser';
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useSelector } from 'react-redux'
+import slugify from 'react-slugify'
+
 
 const Home = () => {
   
   useEffect(() => {
     Aos.init();
 }, []);
+const blogs = useSelector(p => p)
 
   const settings = {
     dots: false,
@@ -234,7 +238,7 @@ const Home = () => {
         <div className='container' >
           <h2 className="fw-bold mb-4">{t("home-section-one.12")}</h2>
           <div className='row row-cols-2 row-cols-md-5 g-4'>
-            {productData.slice(35, 45).map(item => (
+            {productData.slice(33, 43).map(item => (
               <SingleHomeProducts
                 id={item.id}
                 title={item.title}
@@ -409,7 +413,22 @@ const Home = () => {
       <section className="section7 my-5 mx-5" style={{ height: "50vh" }}>
         <div className="container">
           <h2 className="fw-bold">Lastest articles</h2>
-
+          <div className='row'>
+         {blogs.map(item=>(
+           <div className='col-12 col-sm-12 col-md-3'>
+           <div className="card g-4">
+           <Link to={`/blog/${(slugify(item.title))}`} style={{textDecoration: "none", color: "black"}}>
+           <img src={item.img[0]} className="card-img-top" alt="..." />
+               <div className="card-body">
+                 <h5 className="card-title fw-bold">{item.title}</h5>
+                 <p className="card-text">{item.desc.slice(1,100)}...</p>
+                 <p className="card-text" style={{color: "#F59A57"}}>{item.date}</p>
+               </div>
+           </Link>
+             </div>
+           </div>
+         ))}
+        </div>
         </div>
       </section>
     </>

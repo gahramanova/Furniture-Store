@@ -61,8 +61,8 @@ const Cart = () => {
                       <div className='content d-flex align-items-lg-start'>
                         <div className='m-3'><i className="fa-solid fa-phone" style={{ color: "#f59a57" }}></i></div>
                         <div>
-                          <h5 className='dark-text'>Have questions?</h5>
-                          <p className='dark-text' style={{ color: "ccc" }}>Our experts are here to help you!</p>
+                          <h5 className='dark-text'>{t("cart.5")}</h5>
+                          <p className='dark-text' style={{ color: "ccc" }}>{t("cart.6")}</p>
                         </div>
                       </div>
                     </div>
@@ -71,8 +71,8 @@ const Cart = () => {
                     <div className='content d-flex align-items-lg-start'>
                       <div className='m-3'><i className="fa-solid fa-lock" style={{ color: "#f59a57" }}></i></div>
                       <div>
-                        <h5 className='dark-text'>Secure Shopping</h5>
-                        <p className='dark-text' style={{ color: "ccc" }}>All transactions are protected by SSL.</p>
+                        <h5 className='dark-text'>{t("cart.7")}</h5>
+                        <p className='dark-text' style={{ color: "ccc" }}>{t("cart.8")}</p>
                       </div>
                     </div>
                   </div>
@@ -80,8 +80,8 @@ const Cart = () => {
                     <div className='content d-flex align-items-lg-start'>
                       <div className='m-3'><i className="fa-solid fa-shield-halved" style={{ color: "#f59a57" }}></i></div>
                       <div>
-                        <h5 className='dark-text'>Privacy Protection</h5>
-                        <p className='dark-text' style={{ color: "ccc" }}>Your privacy is always our top priority.</p>
+                        <h5 className='dark-text'>{t("cart.9")}</h5>
+                        <p className='dark-text' style={{ color: "ccc" }}>{t("cart.10")}</p>
                       </div>
                     </div>
                   </div>
@@ -102,8 +102,9 @@ const Cart = () => {
                     <h5 className='fw-bold dark-text'>{t("cart.4")} </h5>
                     <h3 className='price' style={{ color: "#F59A57" }}>{cartTotal}$</h3>
                   </div>
+                <Link to={"/checkout"} className="btn buy-now mt-4">{t("cart.11")}</Link>
+
                 </div>
-                <Link to={"/checkout"} className="btn btn-dark btn-lg px-4 me-md-2 mt-4">Buy now</Link>
               </div>
             </div>
           </div>
@@ -122,8 +123,8 @@ const Cart = () => {
           </div>
         </section> */}
         <section>
-          <h2 className='fw-bold mx-5 my-5'>You May Be Interested In…</h2>
-          <div className='container'>
+          <div className='container mt-5'>
+          <h2 className='fw-bold '>{t("cart.12")}</h2>
             <div className='row row-cols-2 row-cols-md-5 g-4 my-3'>
               {productData.slice(31, 36).map(item => (
                 <SingleInterestedCard

@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import slug from 'react-slugify';
 import WishBtn from './WishBtn';
 import { useCart } from 'react-use-cart';
+import Rating from './Rating';
 
 
 const SingleHomeProducts = ({img1,title,category, price,rating, alldata}) => {
@@ -21,7 +22,7 @@ const SingleHomeProducts = ({img1,title,category, price,rating, alldata}) => {
           <div className="card-body">
             <div className='d-flex justify-content-between'>
             <p className="card-title fw-bold">{title}</p> 
-            <p>{rating}<i class="fa-solid fa-star" style={{color: "#EABE12"}}></i></p> 
+            <Rating value={rating} color={"#EABE12"}/>
             </div>
             <p style={{color: "#ABA5A5"}} className="card-title">{category}</p>
             <p style={{color: "#F59A57"}} className='card-title fw-bold'>${price}</p>
