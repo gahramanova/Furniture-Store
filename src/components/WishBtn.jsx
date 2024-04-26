@@ -10,15 +10,17 @@ const WishBtn = ({ product }) => {
   const toggleWishlist = (myProduct) => {
     if (inWishlist(myProduct.id)) {
       removeWishlistItem(myProduct.id)
+      swal("Remove from wishlist", "You clicked the button!", "success");
     } else {
       addWishlistItem(myProduct)
+      swal("Add to wishlist", "You clicked the button!", "success");
     }
   }
   return (
     <div>
       <button className='wishlist' onClick={() => {
         toggleWishlist(product);
-        swal("Progress is succesful", "You clicked the button!", "success");
+        
       }}>
 
         {

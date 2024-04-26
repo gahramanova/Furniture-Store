@@ -1,81 +1,152 @@
-
 @mixin display {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+@mixin background {
+    width: 100% !important;
+    height: 80vh !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .home-section .container .card-home-section {
     border: none;
     position: relative;
-   @include display;
+    @include display;
+
     .card-body {
         position: absolute;
-    } 
-     .card-title {
+    }
+
+    .card-title {
         @include display;
         border: 2px solid white;
         background-color: white;
         padding: 5px 10px;
-        border-radius: 20px; 
+        border-radius: 20px;
         font-weight: bold;
     }
+
     img {
         border-radius: 50%;
         border: none;
         transition: color 0.4s ease, transform 0.4s ease;
     }
 }
+
 .home-section .container .card-home-section:hover .card-img-top {
     transform: scale(1.1);
 }
-.slick-prev, .slick-next {
+
+.slick-prev,
+.slick-next {
     &::before {
-      color: rgba(255, 255, 255) !important;
-      font-size: 2.5rem !important;
+        color: rgba(255, 255, 255) !important;
+        font-size: 2.5rem !important;
     }
-  }
-  
-  .slick-prev {
+}
+
+.slick-prev {
     width: 2.5rem;
     height: 2.5rem;
     z-index: 2;
     left: 30px !important;
-  }
-  
-  .slick-next {
+}
+
+.slick-next {
     width: 2.5rem;
     height: 2.5rem;
     z-index: 2;
     right: 35px !important;
-  }
+}
 
-.slider {
-    position: relative;
+// .slider {
+//     position: relative;
+//     .content {
+//         position: absolute;
+//         display: flex;
+//         // align-items: center;
+//         justify-content: left;
+//         flex-direction: column;
+//         top: 120px;
+//         left: 200px;
+//         .first {
+//             display: flex !important;
+//             align-items: center !important;
+//             flex-wrap: wrap !important;
+//             margin-bottom: 150px !important;
+
+//         }
+//         .second {
+//             display: flex;
+//             align-items: center;
+//             flex-wrap: wrap;
+//             margin-bottom: 50px !important;
+//         }
+//         .third .btn {
+//             background-color: white;
+//             padding: 12px 25px;
+//             border-radius: 25px;
+//         }
+//     }
+// }
+
+
+.slider1 {
+    background: url("https://woodmart.b-cdn.net/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-slider-1-opt-1.jpg");
+    @include background;
+
+}
+
+.slider2 {
+    background: url("https://woodmart.b-cdn.net/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-slider-2-opt-1.jpg");
+    @include background;
+}
+
+.slider3 {
+    background: url("https://woodmart.b-cdn.net/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-slider-3-opt-1.jpg");
+    @include background;
+
+}
+
+.slider1,
+.slider2,
+.slider3 {
+
+    display: flex !important;
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    padding-left: 150px;
+
     .content {
-        position: absolute;
+        width: 500px;
+        height: 300px;
         display: flex;
-        // align-items: center;
-        justify-content: left;
+        align-items: flex-start;
         flex-direction: column;
-        top: 120px;
-        left: 200px;
-        .first {
-            display: flex !important;
-            align-items: center !important;
-            flex-wrap: wrap !important;
-            margin-bottom: 150px !important;
+        justify-content: flex-start;
+    }
+}
 
-        }
-        .second {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-bottom: 50px !important;
-        }
-        .third .btn {
-            background-color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
+@media (max-width:576px) {
+
+    .slider1,
+    .slider2,
+    .slider3 {
+
+        display: flex !important;
+        align-items: center !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding-left: 50px !important;
+    }
+    .content{
+        img{
+            display: none !important;
         }
     }
 }
@@ -85,19 +156,23 @@
     border: none;
     display: flex;
     justify-content: space-between;
+
     .card-body {
         position: absolute;
         display: flex
-    } 
-     .card-title-one {
+    }
+
+    .card-title-one {
         display: flex;
         justify-content: space-between;
         color: white;
         font-weight: bold;
-    } 
+    }
+
     .text-paragraf {
         color: white;
     }
+
     .card-img-bottom {
         border-radius: 10px;
     }
@@ -106,25 +181,28 @@
 
 @media (max-width: 980px) {
     .section1 {
-        .slider {
-            img {
-                background-position: center;
-                background-size: cover !important;
-            }
-            .content {
-                align-items: center;
-                text-align: center;
-            }
+
+        .slider1,
+        .slider2,
+        .slider3 {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 50vh !important;
+
+
         }
 
     }
-    
+
     .section2 {
         display: none;
     }
+
     .section5 .lazy {
         display: none;
     }
+
     .section6 .row {
         display: flex;
         flex-direction: column;
@@ -132,7 +210,7 @@
 }
 
 @media (min-width: 981px) {
-    
+
     .section2-responsive {
         display: none;
     }
@@ -143,18 +221,21 @@
     .video-photo {
         border-radius: 200px;
     }
+
     .photo {
         position: relative;
         @include display;
+
         .content {
             position: absolute;
         }
+
         .text-title {
             @include display;
             color: white;
         }
     }
-    
+
 }
 
 @media (max-width: 980px) {
@@ -164,4 +245,3 @@
     }
 
 }
-

@@ -73,10 +73,9 @@ const blogs = useSelector(p => p)
     <>
       <section className="section1">
         <Slider {...settings}>
-          <div className="slider">
-            <img src={sliderOne} style={{ objectFit: "contain", height: "100%" }} />
-            <div className="content">
-              <div className="first d-flex align-items-center">
+          <div className="slider1">
+            <div className="content" data-aos = "fade-right">
+              <div className="first d-flex align-items-center" >
                 <img className="mx-2" style={{ width: "80px", height: "80px" }} src={slider1} />
                 <h5 style={{ color: "#414240" }}> {t(parse((`home-slider.0`)))}<br /></h5>
               </div>
@@ -89,8 +88,7 @@ const blogs = useSelector(p => p)
               </div>
             </div>
           </div>
-          <div className="slider">
-            <img src={sliderTwo} style={{ objectFit: "contain", height: "100%" }} />
+          <div className="slider2">
             <div className="content">
               <div className="first d-flex align-items-center">
                 <img className="mx-2" style={{ width: "80px", height: "80px" }} src={slider2} />
@@ -105,8 +103,7 @@ const blogs = useSelector(p => p)
               </div>
             </div>
           </div>
-          <div className="slider">
-            <img src={sliderThree} style={{ objectFit: "contain", height: "100%" }} />
+          <div className="slider3">
             <div className="content">
               <div className="first d-flex align-items-center">
                 <img className="mx-2" style={{ width: "80px", height: "80px" }} src={slider3} />
