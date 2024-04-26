@@ -21,10 +21,12 @@ import { ProductContext } from "../context/ProductContext"
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
+import { useWishlist } from 'react-use-wishlist';
 
 const Header = () => {
   const [productData] = useContext(ProductContext)
   const { totalItems } = useCart();
+  const {totalWishlistItems} = useWishlist()
   const navigate = useNavigate()
   const [mode, setMode] = useContext(ModeContext);
   const [query, setQuery] = useState("")
@@ -151,7 +153,12 @@ const Header = () => {
                     </span>
                   </Link>
 
-                  <Link to={"/wishlist"} className='btn media' style={{ backgroundColor: "#EFEEEB" }}><i className="fa-regular fa-heart"></i></Link>
+                  <Link to={localStorage.getItem("login") === "true" ? "/wishlist" : "/login"} type="button" style={{ backgroundColor: "#EFEEEB" }} className='btn media position-relative mx-2'>
+                    <i className="fa-regular fa-heart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                      {localStorage.getItem("login") === "true" ? totalWishlistItems : 0}
+                    </span>
+                    </Link>
 
                   {localStorage.getItem("login") === "true" ?
                     <NavLink className="media" style={{ textDecoration: "none", color: "black" }} to={"/myprofile"}> <FaUserAlt className='dark-mode-logo mx-2'/>{t("header-login.2")} {localStorage.getItem("firstname")}

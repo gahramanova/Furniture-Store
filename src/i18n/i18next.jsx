@@ -13,9 +13,6 @@ i18n
     whitelist: langs,
     fallbackLng: "en", // use en if detected lng is not available
     saveMissing: true, // send not translated keys to endpoint
-    backend: {
-      loadPath: "../../src/locales/{{lng}}/translation.json", // yeni dil dosyalarının yolu
-    },
   });
 
 export default i18n;
