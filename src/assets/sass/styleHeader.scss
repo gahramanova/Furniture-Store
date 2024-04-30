@@ -19,6 +19,10 @@ header .search {
    }
    header .woodmart-two{
     display: block;
+    position: fixed;
+    background-color: #FBFAF7;
+    top: 0;
+    z-index: 999;
     .login {
         margin-left: -10px;
     }

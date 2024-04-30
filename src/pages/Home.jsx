@@ -74,7 +74,7 @@ const blogs = useSelector(p => p)
       <section className="section1">
         <Slider {...settings}>
           <div className="slider1">
-            <div className="content" data-aos = "fade-right">
+            <div className="content" data-aos = "fade-down-right">
               <div className="first d-flex align-items-center" >
                 <img className="mx-2" style={{ width: "80px", height: "80px" }} src={slider1} />
                 <h5 style={{ color: "#414240" }}> {t(parse((`home-slider.0`)))}<br /></h5>
@@ -83,13 +83,13 @@ const blogs = useSelector(p => p)
                 <h1 className="fw-bold" style={{ color: "#414240" }}>{t("home-slider.1")}</h1>
               </div>
               <div className="third">
-                <button className="btn fw-bold"> {t("home-slider.2")}</button>
+                <button className="btn fw-bold shop-now"> {t("home-slider.2")}</button>
 
               </div>
             </div>
           </div>
           <div className="slider2">
-            <div className="content">
+            <div className="content" data-aos = "fade-down-right">
               <div className="first d-flex align-items-center">
                 <img className="mx-2" style={{ width: "80px", height: "80px" }} src={slider2} />
                 <h5 style={{ color: "#414240" }}>{t("home-slider.3")}</h5>
@@ -98,13 +98,13 @@ const blogs = useSelector(p => p)
                 <h1 className="fw-bold" style={{ color: "#414240" }}>{t("home-slider.4")}</h1>
               </div>
               <div className="third">
-                <button className="btn fw-bold"> {t("home-slider.2")}</button>
+                <button className="btn fw-bold shop-now"> {t("home-slider.2")}</button>
 
               </div>
             </div>
           </div>
           <div className="slider3">
-            <div className="content">
+            <div className="content" data-aos = "fade-down-right">
               <div className="first d-flex align-items-center">
                 <img className="mx-2" style={{ width: "80px", height: "80px" }} src={slider3} />
                 <h5 style={{ color: "#414240" }}>{t("home-slider.5")}</h5>
@@ -113,7 +113,7 @@ const blogs = useSelector(p => p)
                 <h1 className="fw-bold" style={{ color: "#414240" }}>{t("home-slider.6")}</h1>
               </div>
               <div className="third">
-                <button className="btn fw-bold"> {t("home-slider.2")}</button>
+                <button className="btn fw-bold shop-now"> {t("home-slider.2")}</button>
 
               </div>
             </div>
@@ -123,7 +123,7 @@ const blogs = useSelector(p => p)
 
       {/* Our Categories ==================================================================================================*/}
       <section className="my-5 mx-5 home-section">
-        <div className="container">
+        <div className="container" data-aos = "fade-down-right">
           <h2 className="fw-bold">{t("home-section-one.0")}</h2>
           <p>{t("home-section-one.1")}</p>
           <div className="row row-cols-2 row-cols-md-5 g-4">
@@ -232,7 +232,7 @@ const blogs = useSelector(p => p)
       </section>
 
       <section className="section2">
-        <div className='container' >
+        <div className='container' data-aos="zoom-in-down">
           <h2 className="fw-bold mb-4">{t("home-section-one.12")}</h2>
           <div className='row row-cols-2 row-cols-md-5 g-4'>
             {productData.slice(33, 43).map(item => (
@@ -250,7 +250,7 @@ const blogs = useSelector(p => p)
         </div>
       </section>
       <section className="section2-responsive">
-        <div className='container'>
+        <div className='container' >
           <h2 className="fw-bold mb-4">{t("home-section-one.12")}</h2>
           <div className='row g-4'>
            <div className="col-12 col-sm-6">
@@ -381,7 +381,7 @@ const blogs = useSelector(p => p)
 
 
       <section className="section6 mx-5 my-5">
-        <div className="container" >
+        <div className="container" data-aos="zoom-in">
           <h2 className="fw-bold">{t("home-section-one.17")}</h2>
           <div className="row">
             <div className="col-sm-12 col-md-5 d-flex flex-column" >
@@ -407,12 +407,12 @@ const blogs = useSelector(p => p)
         </div>
       </section>
 
-      <section className="section7 my-5 mx-5" style={{ height: "50vh" }}>
+      <section className="section7 my-5 mx-5">
         <div className="container">
           <h2 className="fw-bold">Lastest articles</h2>
           <div className='row'>
          {blogs.map(item=>(
-           <div className='col-12 col-sm-12 col-md-3'>
+           <div className='col-12 col-sm-6 col-md-3'>
            <div className="card g-4">
            <Link to={`/blog/${(slugify(item.title))}`} style={{textDecoration: "none", color: "black"}}>
            <img src={item.img[0]} className="card-img-top" alt="..." />

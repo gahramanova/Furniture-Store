@@ -63,37 +63,6 @@
     right: 35px !important;
 }
 
-// .slider {
-//     position: relative;
-//     .content {
-//         position: absolute;
-//         display: flex;
-//         // align-items: center;
-//         justify-content: left;
-//         flex-direction: column;
-//         top: 120px;
-//         left: 200px;
-//         .first {
-//             display: flex !important;
-//             align-items: center !important;
-//             flex-wrap: wrap !important;
-//             margin-bottom: 150px !important;
-
-//         }
-//         .second {
-//             display: flex;
-//             align-items: center;
-//             flex-wrap: wrap;
-//             margin-bottom: 50px !important;
-//         }
-//         .third .btn {
-//             background-color: white;
-//             padding: 12px 25px;
-//             border-radius: 25px;
-//         }
-//     }
-// }
-
 
 .slider1 {
     background: url("https://woodmart.b-cdn.net/furniture2/wp-content/uploads/sites/11/2023/04/wd-furniture-slider-1-opt-1.jpg");
@@ -130,25 +99,15 @@
         flex-direction: column;
         justify-content: flex-start;
     }
+    .shop-now {
+        background-color: #fbfaf7;
+        border-radius: 30px;
+    } 
 }
 
 @media (max-width:576px) {
 
-    .slider1,
-    .slider2,
-    .slider3 {
-
-        display: flex !important;
-        align-items: center !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        padding-left: 50px !important;
-    }
-    .content{
-        img{
-            display: none !important;
-        }
-    }
+  
 }
 
 .section3 .container .card {
@@ -180,19 +139,24 @@
 
 
 @media (max-width: 980px) {
-    .section1 {
+    .slider1,
+    .slider2,
+    .slider3 {
 
-        .slider1,
-        .slider2,
-        .slider3 {
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 50vh !important;
-
-
+        display: flex !important;
+        align-items: center !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding-left: 50px !important;
+    }
+    .content{
+        width: 250px !important;
+        img{
+            display: none !important;
         }
-
+        h5, h1 {
+            font-size: 30px;
+        }
     }
 
     .section2 {
