@@ -5,22 +5,36 @@ import swal from 'sweetalert'
 
 
 const Checkout = () => {
-    const [firstName, setFirstname] = useState()
-    const [surname, setSurname] = useState()
-    const [alert, setAlert] = useState()
-    const [text, setText] = useState()
+    const [firstName, setFirstname] = useState("")
+    const [surname, setSurname] = useState("")
+    const [email, setEmail] = useState("")
+    const [address, setAddress] = useState("")
+    const [cardName, setCardName] = useState("")
+    const [cardNumber, setCardNumber] = useState("")
+    const [cardDate, setCardDate] = useState("")
+    const [cvc, setCvc] = useState("")
+
+    const [alert, setAlert] = useState("")
+    const [text, setText] = useState("")
     const { items,
-        cartTotal } = useCart()
+        cartTotal, setItems } = useCart()
 
     const checkOutSubmit = e => {
         e.preventDefault()
         if (!firstName || !surname) {
             setAlert("danger")
             setText("Please fill the input")
-        } else {
-            swal("Success", "You clicked the button!", "success");
-            location.assign("/products")
         }
+        setFirstname("")
+        setSurname("")
+        setAddress("")
+        setEmail("")
+        setCardName("")
+        setCardNumber("")
+        setCardDate("")
+        setCvc("")
+        setItems([]) 
+
     }
     return (
         <>
@@ -45,19 +59,11 @@ const Checkout = () => {
                         </div>
                         <h6 style={{ color: "#F59A57" }} className='fw-bold mt-4'>Email address *</h6>
                         <div className="input-group mb-3">
-                            <input type="text" className="form-control" />
+                            <input type="text" className="form-control" value={email} onChange={e=> setEmail(e.target.value)} />
                         </div>
-                        <h6 style={{ color: "#F59A57" }} className='fw-bold mt-4'>City *</h6>
+                        <h6 style={{ color: "#F59A57" }} className='fw-bold mt-4'>Address *</h6>
                         <div className="input-group mb-3">
-                            <input type="text" className="form-control" />
-                        </div>
-                        <h6 style={{ color: "#F59A57" }} className='fw-bold mt-4'>Street address *</h6>
-                        <div className="input-group mb-3">
-                            <input type="text" className="form-control" />
-                        </div>
-                        <h6 style={{ color: "#F59A57" }} className='fw-bold mt-4'>Zip Code*</h6>
-                        <div className="input-group mb-3">
-                            <input type="number" className="form-control" />
+                            <input type="text" className="form-control" value={address} onChange={e => setAddress(e.target.value)}/>
                         </div>
                         <h6 style={{ color: "#F59A57" }} className='fw-bold mt-4'>Order notes (optional)</h6>
                         <div className="form-floating">
@@ -100,21 +106,37 @@ const Checkout = () => {
 
                         <div className='d-flex align-items-center justify-content-center mt-4'>
                             <div className='col-6'>
+                                <div className='credit-card'>
                                 <div className="input-group mb-3">
-                                    <input type="text" className="form-control" placeholder='**** **** **** ****'  />
+                                    <input type="text" className="form-control" placeholder='Card Holder Name' value={cardName} onChange={e=> setCardName(e.target.value)} />
 
                                 </div>
                                 <div className="input-group mb-3">
-                                    <input type="text" className="form-control" placeholder='MM/YY'  />
-                                    <input type="text" className="form-control" placeholder='***'  />
+                                    <input type="number" className="form-control" placeholder='**** **** **** ****' value={cardNumber} onChange={e=> setCardNumber(e.target.value)}/>
+
+                                </div>
+                                <div className="input-group mb-3">
+                                    <input type="number" className="form-control" placeholder='MM/YY' value={cardDate} onChange={e=> setCardDate(e.target.value)}/>
+
+                                    <input type="password" className="form-control" placeholder='***' value={cvc} onChange={e=> setCvc(e.target.value)}/>
                                 </div>
                                 <button className='btn payment' type='submit' onClick={() => {
-                                      window.scroll({
-                                        top: 0,
-                                        left: 0,
-                                        behavior: "smooth",
-                                      });
+                                    if (!firstName || !surname) {
+                                        window.scroll({
+                                            top: 0,
+                                            left: 0,
+                                            behavior: "smooth",
+                                          })
+                                    } else {
+                                        swal({
+                                            title: "Good job!",
+                                            text: "You clicked the button!",
+                                            icon: "success",
+                                            button: "Aww yiss!",
+                                          });
+                                    }
                                       }}>Payment</button>
+                                </div>
                             </div>
                         </div>
                     </form>
