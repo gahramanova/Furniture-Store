@@ -80,7 +80,7 @@ const blogs = useSelector(p => p)
                 <h1 className="fw-bold" style={{ color: "#414240" }}>{t("home-slider.1")}</h1>
               </div>
               <div className="third">
-                <button className="btn fw-bold shop-now"> {t("home-slider.2")}</button>
+                <Link to={"/products"} className="btn fw-bold shop-now"> {t("home-slider.2")}</Link>
 
               </div>
             </div>
@@ -95,7 +95,7 @@ const blogs = useSelector(p => p)
                 <h1 className="fw-bold" style={{ color: "#414240" }}>{t("home-slider.4")}</h1>
               </div>
               <div className="third">
-                <button className="btn fw-bold shop-now"> {t("home-slider.2")}</button>
+                <Link to={"/products"} className="btn fw-bold shop-now"> {t("home-slider.2")}</Link>
 
               </div>
             </div>
@@ -110,7 +110,7 @@ const blogs = useSelector(p => p)
                 <h1 className="fw-bold" style={{ color: "#414240" }}>{t("home-slider.6")}</h1>
               </div>
               <div className="third">
-                <button className="btn fw-bold shop-now"> {t("home-slider.2")}</button>
+                <Link to={"/products"} className="btn fw-bold shop-now"> {t("home-slider.2")}</Link>
 
               </div>
             </div>
