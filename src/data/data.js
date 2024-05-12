@@ -91,7 +91,7 @@ const category = [
     },
     {
         id: 7,
-        title: "Stonewashed Tana",
+        title: "Stonewashed",
         category: "textiles",
         price: 67.00,
         img:[
@@ -198,7 +198,7 @@ const category = [
     },
     {
         id: 14,
-        title: "Delaunait Quilt",
+        title: "Delaunait",
         category: "armchairs",
         price: 1259.00,
         img:[
@@ -243,7 +243,7 @@ const category = [
     },
     {
         id: 17,
-        title: "Maya dune Linel",
+        title: "Maya-dune",
         category: "textiles",
         price: 530.00,
         img:[
@@ -258,7 +258,7 @@ const category = [
     },
     {
         id: 18,
-        title: "Mademoiselle Annette",
+        title: "Mademoiselle",
         category: "lighting",
         price: 680.00,
         img:[
@@ -273,7 +273,7 @@ const category = [
     },
     {
         id: 19,
-        title: "Dancing Alligator",
+        title: "Alligator",
         category: "toys",
         price: 32.00,
         img:[
@@ -393,7 +393,7 @@ const category = [
     },
     {
         id: 27,
-        title: "Architecture Throw",
+        title: "Architect Throw",
         category: "textiles",
         price: 380.00,
         img:[
@@ -423,7 +423,7 @@ const category = [
     },
     {
         id: 29,
-        title: "Ice Cream",
+        title: "Ice-Cream",
         category: "lighting",
         price: 850.00,
         img:[
@@ -483,7 +483,7 @@ const category = [
     },
     {
         id: 33,
-        title: "Eames Segmented",
+        title: "Segmented",
         category: "tables",
         price: 3200.00,
         img:[

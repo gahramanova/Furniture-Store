@@ -13,3 +13,8 @@
     color: white;
     transition: ease-in 0.5s;
 }
+@media (max-width: 980px) {
+    .scroll-icon {
+        display: none;
+    }
+}

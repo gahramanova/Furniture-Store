@@ -27,6 +27,7 @@ import NotFound from '../pages/NotFound'
 import TopToBtn from '../components/TopToScroll/TopToBtn'
 import Checkout from '../pages/Checkout'
 import Preloader from "../components/Preloader"
+import ThankYou from '../pages/ThankYou'
 
 
 
@@ -72,6 +73,7 @@ const AppRouter = () => {
                 <Route path="/myprofile" element={<Myprofile />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/checkout" element={<Checkout />} />
+                <Route path="/thankyou" element={<ThankYou />} />
                 <Route path="*" element={<NotFound />} />
 
               </Routes>

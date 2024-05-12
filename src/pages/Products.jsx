@@ -78,7 +78,7 @@ const Products = () => {
           <div className="col-12 col-sm-12 col-md-4" data-aos="fade-right">
             <div className='sidebar mt-3'>
               <div className='filter-by-price'>
-                <h5 className='fw-bold' style={{ color: "#F59A57" }}>Filter by Price</h5>
+                <h5 className='fw-bold' style={{ color: "#F59A57" }}>{t("products.1")}</h5>
 
                 <div className='d-flex justify-content-between'>
                   <span>{price.minPrice}</span>
@@ -95,19 +95,19 @@ const Products = () => {
 
               </div>
               <div className='filter-by-categories'>
-                <h5 className='fw-bold mt-4' style={{ color: "#F59A57" }}>Filter by categories</h5>
+                <h5 className='fw-bold mt-4' style={{ color: "#F59A57" }}>{t("products.2")}</h5>
                 <form className='radio-form'>
                   <Radio.Group onChange={(e) => setCategory(e.target.value)} value={category} className='radio-group'>
-                    <Radio value="" className='radio-button'><h6 className='fw-bold'>All</h6></Radio>
-                    <Radio value="chairs" className='radio-button'><h6 className='fw-bold'>Chairs</h6></Radio>
-                    <Radio value="tables" className='radio-button'><h6 className='fw-bold'>Tables</h6></Radio>
-                    <Radio value="sofas" className='radio-button'><h6 className='fw-bold'>Sofas</h6></Radio>
-                    <Radio value="armchairs" className='radio-button'><h6 className='fw-bold'>Armchairs</h6></Radio>
-                    <Radio value="beds" className='radio-button'><h6 className='fw-bold'>Beds</h6></Radio>
-                    <Radio value="textiles" className='radio-button'><h6 className='fw-bold'>Textiles</h6></Radio>
-                    <Radio value="lighting" className='radio-button'><h6 className='fw-bold'>Lightings</h6></Radio>
-                    <Radio value="toys" className='radio-button'><h6 className='fw-bold'>Toys</h6></Radio>
-                    <Radio value="decor" className='radio-button'><h6 className='fw-bold'>Decor</h6></Radio>
+                    <Radio value="" className='radio-button'><h6 className='fw-bold'>{t("products.3")}</h6></Radio>
+                    <Radio value="chairs" className='radio-button'><h6 className='fw-bold'>{t("products.4")}</h6></Radio>
+                    <Radio value="tables" className='radio-button'><h6 className='fw-bold'>{t("products.5")}</h6></Radio>
+                    <Radio value="sofas" className='radio-button'><h6 className='fw-bold'>{t("products.6")}</h6></Radio>
+                    <Radio value="armchairs" className='radio-button'><h6 className='fw-bold'>{t("products.7")}</h6></Radio>
+                    <Radio value="beds" className='radio-button'><h6 className='fw-bold'>{t("products.8")}</h6></Radio>
+                    <Radio value="textiles" className='radio-button'><h6 className='fw-bold'>{t("products.9")}</h6></Radio>
+                    <Radio value="lighting" className='radio-button'><h6 className='fw-bold'>{t("products.10")}</h6></Radio>
+                    <Radio value="toys" className='radio-button'><h6 className='fw-bold'>{t("products.11")}</h6></Radio>
+                    <Radio value="decor" className='radio-button'><h6 className='fw-bold'>{t("products.12")}</h6></Radio>
                   </Radio.Group>
                 </form>
               </div>

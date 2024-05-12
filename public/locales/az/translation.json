@@ -54,7 +54,8 @@
         "21": "Otaq sahəsini nəzərə alın",
         "22": "Lazımsız mebel parçaları almayın",
         "23": "Necə mebel seçməli?",
-        "24": "SØLREM mebel kolleksiyası"        
+        "24": "SØLREM mebel kolleksiyası",
+        "25": "Ən yeni bloqlar"     
 
     }, 
     "footer" : {
@@ -141,7 +142,21 @@
         "8": "Hesab yarat"
     },
     "products": {
-        "0": "Məhsullar"
+        "0": "Məhsullar",
+        "1": "Qiymətə görə filter",
+        "2": "Kateqoriyaya görə filter",
+        "3": "Hamısı",
+        "4": "Stullar",
+        "5": "Stollar",
+        "6": "Divanlar",
+        "7": "Qoltuqlar",
+        "8": "Yataqlar",
+        "9": "Tekstil",
+        "10": "İşıqlar",
+        "11": "Oyuncaqlar",
+        "12": "Dekor"
+
+        
     },
     "blog" : {
         "0": "Məqalələr"
@@ -167,8 +182,8 @@
     "cart": {
         "0": "Ümumi məbləğ",
         "1": "Sub cəmi:",
-        "2": "Göndərmə",
-        "3": "Pulsuz göndərmə",
+        "2": "Çatdırılma",
+        "3": "Pulsuz çatdırılma",
         "4": "Ümumi",
         "5": "Suallar var?",
         "6": "Bizim expertlər sənə kömək etmək üçün buradadır!",
@@ -177,9 +192,41 @@
         "9": "Gizlilik qoruması",
         "10": "Sizin gizliliyiniz hər zaman bizim üçün önəmlidir",
         "11": "Indi al",
-        "12": "Sizə maraqlı ola bilər..."
+        "12": "Sizə maraqlı ola bilər...",
+        "13": "Şəkil",
+        "14": "Məhsulun adı",
+        "15": "Qiymət",
+        "16": "Məhsulun sayı",
+        "17": "Silmək",
+        "18": "Ümumi məbləğ"
+        
+        
 
-
+    },
+    "product-details": {
+        "0": "Yeni kolleksiya",
+        "1": "Tələs və 20%-ə qədər endirim əldə et",
+        "2": "Səbətə əlavə et",
+        "3": "İndi al"
+    },
+    "checkout": {
+        "0": "Çatdırılma Məlumatları",
+        "1": "Ad*",
+        "2": "Soyad*",
+        "3": "E-poçt addresi*",
+        "4": "Yaşayış ünvanı*",
+        "5": "Sizin sifarişiniz",
+        "6": "Məhsulun şəkili",
+        "7": "Məhusulun adı",
+        "8": "Qiymət",
+        "9": "Ümumi məbləğ", 
+        "10": "Ödəniş məlumatları",
+        "11": "Kart sahibinin adı",
+        "12": "Ödəmək"
+    },
+    "thank-you": {
+        "0": "Sifarişiniz qəbul olundu"
+        
     }
     
 }

@@ -44,6 +44,8 @@ const Home = () => {
   useEffect(() => {
     Aos.init();
 }, []);
+const randomNumber = Math.floor(Math.random() *46);
+
 const blogs = useSelector(p => p)
 
   const settings = {
@@ -232,7 +234,7 @@ const blogs = useSelector(p => p)
         <div className='container' data-aos="zoom-in-down">
           <h2 className="fw-bold mb-4">{t("home-section-one.12")}</h2>
           <div className='row row-cols-2 row-cols-md-5 g-4'>
-            {productData.slice(33, 43).map(item => (
+            {productData.slice(randomNumber, randomNumber+10).map(item => (
               <SingleHomeProducts
                 id={item.id}
                 title={item.title}
@@ -250,8 +252,8 @@ const blogs = useSelector(p => p)
         <div className='container' >
           <h2 className="fw-bold mb-4">{t("home-section-one.12")}</h2>
           <div className='row g-4'>
-           <div className="col-12 col-sm-6">
-             {productData.slice(35, 45).map(item => (
+             {productData.slice(randomNumber, randomNumber+10).map(item => (
+           <div className="col-12 col-md-6 col-lg-4 col-xxl-4">
               <SingleHomeProducts
                 id={item.id}
                 title={item.title}
@@ -261,8 +263,8 @@ const blogs = useSelector(p => p)
                 rating={item.rating}
                 alldata={item}
               />
-            ))}
            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -350,10 +352,10 @@ const blogs = useSelector(p => p)
     <h2 className="fw-bold">{t("home-section-one.15")}</h2>
     <p style={{ color: "#ccc" }}>{t("home-section-one.16")}</p>
     <div className="row">
-      <div className="col-sm-6 col-md-7 col-lg-8">
+      <div className="col-12 col-sm-6 col-md-8 col-lg-8">
         <div className="row">
-          {productData.slice(1, 4).map(item => (
-            <div className="col-12 col-sm-6 col-md-4">
+          {productData.slice(randomNumber, randomNumber+3).map(item => (
+            <div className="col-12 col-sm-6 col-md-6 col-lg-5 col-xxl-4">
               <SingleHomeProducts
                 id={item.id}
                 title={item.title}
@@ -367,7 +369,7 @@ const blogs = useSelector(p => p)
           ))}
         </div>
       </div>
-      <div className="col-sm-6 col-md-5 col-lg-4">
+      <div className="col-12 col-sm-6 col-md-4 col-lg-4">
         <img className="lazy" src={lazy} style={{ width: "100%", height: "540px", borderRadius: "15px" }} />
       </div>
     </div>
@@ -406,7 +408,7 @@ const blogs = useSelector(p => p)
 
       <section className="section7 my-5 mx-5">
         <div className="container">
-          <h2 className="fw-bold">Lastest articles</h2>
+          <h2 className="fw-bold">{t("home-section-one.25")}</h2>
           <div className='row'>
          {blogs.map(item=>(
            <div className='col-12 col-sm-6 col-md-3'>

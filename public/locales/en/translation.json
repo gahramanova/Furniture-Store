@@ -54,7 +54,8 @@
         "21": "Consider the area of the room",
         "22": "Do not buy unnecessary pieces of furniture",
         "23": "How choose furniture",
-        "24": "SØLREM furniture collection"
+        "24": "SØLREM furniture collection",
+        "25": "Latest Blogs"
     },
     "footer" : {
         "0": "Online store with a wide selection of furniture and decor",
@@ -139,7 +140,19 @@
         "8": "Register"
     },
     "products": {
-        "0": "Products"
+        "0": "Products",
+        "1": "Filter by price",
+        "2": "Filter by category",
+        "3": "All",
+        "4": "Chairs",
+        "5": "Tables",
+        "6": "Sofas",
+        "7": "Armchairs",
+        "8": "Beds",
+        "9": "Textiles",
+        "10": "Lightings",
+        "11": "Toys",
+        "12": "Decor"
     },
     "blog" : {
         "0": "Blogs"
@@ -176,7 +189,38 @@
         "9": "Privacy Protection",
         "10": "Your privacy is always our top priority.",
         "11": "Buy now",
-        "12": "You May be Interested..."
+        "12": "You May be Interested...",
+        "13": "Image",
+        "14": "Product Name",
+        "15": "Price",
+        "16": "Item quantity",
+        "17": "Delete",
+        "18": "Sub total"
+    },
+    "product-details": {
+        "0": "Soft Edge Collection",
+        "1": "Hurry and get discounts up to 20%",
+        "2": "Add to cart",
+        "3": "Buy now"
+    },
+    "checkout": {
+        "0": "Billing Details",
+        "1": "First Name*",
+        "2": "Last Name*",
+        "3": "Email address*",
+        "4": "Address",
+        "5": "Your order",
+        "6": "Product photo",
+        "7": "Product name",
+        "8": "Price",
+        "9": "Cart Total", 
+        "10": "Payment Information",
+        "11": "Cart Holder Name",
+        "12": "Payment"
+    },
+    "thank-you": {
+        "0": "Your order has been accepted"
+        
     }
     }
     

@@ -63,9 +63,9 @@ const About = () => {
       <h3 className='fw-bold text-center'>{t("about.3")}</h3>
       <div className='container mt-5' data-aos="zoom-in-down">
         <div className='row'>
-          <div className='col-12 col-sm-6 col-md-4'>
-            <div className="card  card-member" >
-              <img src={memberOne} className="card-img-top" alt="..." />
+          <div className='col-12 col-sm-6 col-md-6 col-lg-4 col-xxl-4'>
+            <div className="card card-member" >
+              <img src={memberOne} className="card-img-top" alt="..." style={{width: "100%", objectFit:"contain"}}/>
               <div className="card-body d-flex flex-column align-items-center">
                 <h5 className="card-title fw-bold">Marvin McKinney</h5>
                 <p className="card-text" style={{color: "#ccc"}}>Ceo, Co-Founder</p>

@@ -6,15 +6,17 @@
 }
 
 .beside-container {
-    width: 300px;
-    height: 370px;
+    width: 100%;
     background-color: white;
     border-radius: 20px;
-    .content {
-        padding: 10px 0px 0px 30px;
-        .sub-total, .free-shipping, .total {
-            padding: 20px 0px 30px 0px;
+    .cart-content {
+        padding: 20px;
+        ul {
+            padding-left: 0px !important;
+        }
+        div {
             border-bottom: 1px solid #ccc;
+            margin-bottom: 60px;
         }
     }
     .buy-now {
@@ -33,14 +35,7 @@
         border-radius: 5px;
         color: white;
     }
-    .quantity {
-        .dec {
-            background-color: #F59A57;
-        }
-        .inc {
-            background-color: #ccc;
-        }
-    }
+ 
     .col-lg-7 {
         .container-box {
             margin-right: 30px;
@@ -83,6 +78,19 @@
         flex-direction: column; 
         .part-two, .part-three{
             margin-top: 10px;
+        }
+    }
+    .container {
+        .item-quantity {
+            margin-left: 30px;
+        }
+        .beside-container {
+            margin-top: 10px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
         }
     }
 }

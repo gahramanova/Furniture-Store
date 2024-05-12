@@ -7,6 +7,8 @@ import { useTranslation } from 'react-i18next';
 import WishBtn from '../components/WishBtn';
 import SingleProducts from '../components/SingleProducts';
 import Rating from '../components/Rating';
+import swal from 'sweetalert'
+
 
 const Wishlist = () => {
   const { items, 
@@ -28,7 +30,7 @@ const Wishlist = () => {
       <div className='container'>
         <div className='row'>
           {items.map(item => (
-            <div key={item.id} className='col-12 col-sm-6 col-md-3 my-3'>
+            <div key={item.id} className='col-12 col-sm-6 col-md-6 col-lg-4 col-xxl-4 my-3'>
               <div className='first-div'>
                 <div className="card card-hover">
                   <Link to={`/products/${slug(item.title)}`} style={{ textDecoration: "none" }}>
@@ -43,7 +45,17 @@ const Wishlist = () => {
                     </div>
                   </Link>
                   <div className='cart d-flex justify-content-around'>
-                    <button onClick={() => localStorage.getItem("login") === "true" ? addItem(item) : navigate("/login")} className="addtocart">
+                    <button onClick={() =>
+                    {
+                      if (localStorage.getItem("login") === ("true") ) {
+                        addItem(item)
+                        swal("Add to cart!", "You clicked the button!", "success");
+                      } else {
+  
+                        navigate("/login")}
+                      }
+                    }
+                        className="addtocart">
                       {t("home-section-one.13")}
                     </button>
                     <WishBtn product={item} />

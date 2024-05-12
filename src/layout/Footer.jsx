@@ -27,7 +27,7 @@ const Footer = () => {
   <div className="container-fluid">
     <div className="row">
       <div className='mb-4'><img className='logo' src={mode==="light"?logoLight:logoDark}></img></div>
-      <div className="col-6 col-md-2 mb-3">
+      <div className="col-6 col-md-3 mb-3">
         <h5>{t("footer.4")}</h5>
         <ul className="nav flex-column">
           <li className="nav-item mb-2"><NavLink to={"/about"} className="nav-link p-0">{t("footer.5")}</NavLink></li>
@@ -37,7 +37,7 @@ const Footer = () => {
           <li className="nav-item mb-2"><NavLink to={"/giftcards"} className="nav-link p-0">{t("footer.9")}</NavLink></li>
         </ul>
       </div>
-      <div className="col-6 col-md-2 mb-3">
+      <div className="col-6 col-md-3 mb-3">
         <h5>{t("footer.10")}</h5>
         <ul className="nav flex-column">
           <li className="nav-item mb-2"><NavLink to={"/products"} className="nav-link p-0 ">{t("footer.11")}</NavLink></li>
@@ -47,7 +47,7 @@ const Footer = () => {
           <li className="nav-item mb-2"><NavLink to={"/products"} className="nav-link p-0 ">{t("footer.15")}</NavLink></li>
         </ul>
       </div>
-      <div className="col-6 col-md-2 mb-3">
+      {/* <div className="col-6 col-md-2 mb-3">
         <h5>{t("footer.16")}</h5>
         <ul className="nav flex-column">
           <li className="nav-item mb-2"><NavLink to={"/"} className="nav-link p-0">{t("footer.17")}</NavLink></li>
@@ -56,16 +56,16 @@ const Footer = () => {
           <li className="nav-item mb-2"><NavLink to={"/faq"} className="nav-link p-0">{t("footer.20")}</NavLink></li>
           <li className="nav-item mb-2"><NavLink to={"/about"} className="nav-link p-0 ">{t("footer.21")}</NavLink></li>
         </ul>
-      </div>
+      </div> */}
       <div className="col-md-5 offset-md-1 mb-3">
         <form>
           <h5>{t("footer.22")}</h5>
           <div className="d-flex flex-column flex-sm-row w-100 gap-2">
           <ul className="list-unstyled d-flex">
-            <li className=""><NavLink className="link-body-emphasis" href="#"><img src={facebook} style={{width: "24px", height:"24px"}}></img></NavLink></li>
-            <li className="ms-3"><NavLink className="link-body-emphasis" href="#"><img src={twitter} style={{width: "24px", height:"24px"}}></img></NavLink></li>
-            <li className="ms-3"><NavLink className="link-body-emphasis" href="#"><img src={pinterest} style={{width: "24px", height:"24px"}}></img></NavLink></li>
-            <li className="ms-3"><NavLink className="link-body-emphasis" href="#"><img src={linkedin} style={{width: "24px", height:"24px"}}></img></NavLink></li>
+            <li className=""><NavLink to={"https://www.facebook.com/"} className="link-body-emphasis" href="#"><img src={facebook} style={{width: "24px", height:"24px"}}></img></NavLink></li>
+            <li className="ms-3"><NavLink to={"https://twitter.com/"} className="link-body-emphasis" href="#"><img src={twitter} style={{width: "24px", height:"24px"}}></img></NavLink></li>
+            <li className="ms-3"><NavLink to={"https://www.pinterest.com/"} className="link-body-emphasis" href="#"><img src={pinterest} style={{width: "24px", height:"24px"}}></img></NavLink></li>
+            <li className="ms-3"><NavLink to={"https://www.linkedin.com/"} className="link-body-emphasis" href="#"><img src={linkedin} style={{width: "24px", height:"24px"}}></img></NavLink></li>
         </ul>
           </div>
           <h5 className='text-bold'>{t("footer.23")}</h5>

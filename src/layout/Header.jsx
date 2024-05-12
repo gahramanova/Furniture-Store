@@ -46,6 +46,16 @@ const Header = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+  
+  
+  document.querySelectorAll('.nav-link').forEach(item => {
+    item.addEventListener('click', () => {
+      let offcanvas = document.querySelector('.offcanvas');
+      let offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
+      offcanvasInstance.hide();
+    });
+  });
+  
 
   return (
     <>
@@ -69,7 +79,7 @@ const Header = () => {
                 </ul>
                 <ul className="navbar-nav mb-lg-0">
                   <li className="nav-item">
-                    <NavLink to={"/"} className="nav-link text-secondary" style={{ borderRight: "1px solid #a2a2a2" }}><FaPhoneAlt className='mx-1' />(+604 994 56 78)</NavLink>
+                    <NavLink to={"/contact"} className="nav-link text-secondary" style={{ borderRight: "1px solid #a2a2a2" }}><FaPhoneAlt className='mx-1' />(+604 994 56 78)</NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink to={"/contact"} className="nav-link mx-3 " aria-current="page" href="#"><img src={expert}></img>
@@ -85,12 +95,12 @@ const Header = () => {
           <div className="container-fluid woodmart-one">
             <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
               <Link to={"/"}>
-                <div className="col-md-2 mb-3 mb-md-0">
+                <div className="col-12 col-md-2 mb-3 mb-md-0">
                   <img className='logo' src={mode === "light" ? logoDark : logoLight}></img>
                 </div>
               </Link>
 
-              <div className="nav col-12 col-md-6 mb-2 justify-content-center mb-md-0">
+              <div className="nav col-12 col-md-5 mb-2 justify-content-center mb-md-0">
 
                 <div className="input-group mb-3 flex-grow-2 mt-3 media" onClick={handleShow}>
                   <input type="text" className="form-control px-3 py-2  search" placeholder={t("header.0")} data-bs-toggle="modal" data-bs-target="#exampleModal" />
@@ -116,7 +126,7 @@ const Header = () => {
                   </Modal.Body>
                 </Modal>
               </div>
-              <div className="col-md-4 text-end d-flex justify-content-evenly align-items-center">
+              <div className="col-md-5 text-end d-flex justify-content-evenly align-items-center">
                 <div>
                   <button className='btn position-relative' onClick={() => {
                     mode === "light" ? setMode("dark") : setMode("light")
@@ -254,6 +264,7 @@ const Header = () => {
                       <NavLink to={"/wishlist"} className="nav-link link-body-emphasis">{t("header.7")}</NavLink>
                     </li>
                   </ul>
+                  
 
                   <div className='mode-user'>
                     <div className='login-buttons'>
@@ -301,7 +312,7 @@ const Header = () => {
                     </div>
                   </div>
                     </div>
-                    <div className=''>
+                    <div>
                      <button type="button" className="btn-close my-3 mx-3" data-bs-dismiss="offcanvas" aria-label="Close" />
                      </div>
                     </div>

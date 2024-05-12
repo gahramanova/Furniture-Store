@@ -6,19 +6,20 @@ import slug from "react-slugify";
 import { useCart } from "react-use-cart";
 import { CiDiscount1 } from "react-icons/ci";
 import SingleInterestedCard from "../components/SingleIntrestedCard"
-import WishBtn from "../components/WishBtn";
-// import OwlCarousel from 'react-owl-carousel';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { useTranslation } from 'react-i18next';
 
 const ProductDetails = () => {
   const [productData] = useContext(ProductContext);
+  const { t } = useTranslation()
 
   const { url } = useParams();
   const { addItem } = useCart();
   const navigate = useNavigate();
 
   const dataDetails = productData.filter(p=>slug(p.title) == url);
+
+const randomNumber = Math.floor(Math.random() *46);
+
 
   return (
     <>
@@ -52,8 +53,8 @@ const ProductDetails = () => {
               <div className="mt-5 text d-flex">
               <div className="discount d-flex align-items-center"><CiDiscount1 /></div>
               <div className="">
-              <h5 className="fw-bold">Soft Edge Collection</h5>
-              <p>Hurry and get discounts up to 20%</p>
+              <h5 className="fw-bold">{t("product-details.0")}</h5>
+              <p>{t("product-details.1")}</p>
               </div>
               </div>
               <p className="mt-4" style={{color: "#747474"}}>{dataDetails[0].description}</p>
@@ -63,9 +64,9 @@ const ProductDetails = () => {
              <Link onClick={()=>{localStorage.getItem("login")=== "true"?addItem(dataDetails[0]):navigate("/login")}}
                   to={"/cart"}
                   className="btn btn-lg px-4 me-md-2 addtocart"
-                >Add to cart
+                >{t("product-details.2")}
                 </Link>
-                <Link onClick={()=> {addItem(dataDetails[0])}} to={"/checkout"} className="btn btn-lg px-4 me-md-2 goback">Buy now</Link>
+                <Link onClick={()=> {addItem(dataDetails[0])}} to={"/checkout"} className="btn btn-lg px-4 me-md-2 goback">{t("product-details.3")}</Link>
 
              </div>
              <div className="d-flex mt-3">           
@@ -80,11 +81,12 @@ const ProductDetails = () => {
         </div>
         </section>
         <section className="product-details-2 mx-5 my-5">
-          <h2 className="fw-bold">You May Be Interested In…</h2>
               
     <div className='container'>
+    <h2 className="fw-bold">{t("cart.12")}</h2>
+
       <div className='row row-cols-2 row-cols-md-5 g-4 my-3'>
-        {productData.slice(16,21).map(item=> (
+        {productData.slice(randomNumber,randomNumber+5).map(item=> (
           <SingleInterestedCard
           id={item.id}
           title={item.title}
