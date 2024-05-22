@@ -5,38 +5,56 @@ import { useTranslation } from 'react-i18next';
 
 
 const Register = () => {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [againpassword, setAgainpassword] = useState("")
+  // const [firstname, setFirstname] = useState("");
+  // const [lastname, setLastname] = useState("");
+  // const [email, setEmail] = useState("")
+  // const [password, setPassword] = useState("")
+  // const [againpassword, setAgainpassword] = useState("")
   const [alert, setAlert] = useState("")
   const [text, setText] = useState("")
   const navigate = useNavigate();
+
+  const [user, setUser] = useState({
+    firstname: "",
+    surname: "",
+    email: "",
+    password: "",
+    againpassword: ""
+  });
+
 
   const toggleLang =(lang)=> {
     i18n.changeLanguage(lang)
   }
   const {t} = useTranslation()
 
+  const handleChange = (e) => {
+    setUser({...user, [e.target.name]: e.target.value});
+  }
   const registerSubmit = e=>{
     e.preventDefault();
     
-    if (!firstname || !lastname || !email || !password || !againpassword) {
+    if (!user.firstname || !user.surname || !user.email || !user.password || !user.againpassword) {
       setAlert("danger")
       setText("Please fill the input")
     } else {
-      if (password === againpassword) {
-      localStorage.setItem("firstname", firstname)
-      localStorage.setItem("lastname", lastname)
-      localStorage.setItem("email", email)
-      localStorage.setItem("password", password)
-      localStorage.setItem("againpassword", againpassword)
-      navigate("/login")
-      } else {
+      if (user.password === user.againpassword) {
+      const registeredUsers = JSON.parse(localStorage.getItem("registeredUsers")) || [];
+      const existingUser = registeredUsers.find(u=> u.email === user.email);
+      if(existingUser) {
         setAlert("warning")
-        setText("password is different")
+        setText("User existed")
+      } 
+      else{
+        registeredUsers.push(user);
+        localStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
+        navigate("/login")
       }
+    }
+    else {
+      setAlert("warning")
+      setText("password is different")
+    } 
     }
   }
 
@@ -63,26 +81,27 @@ const Register = () => {
               {text}
               </div>
               <label className="form-label">{t("register.2")}</label>
-              <input onChange={e=>setFirstname(e.target.value)} type="text" className="form-control input"
+              <input onChange={handleChange} type="text" className="form-control input"
+              name='firstname'
               />
             </div>
           <div className="mb-3">
             <label className="form-label">{t("register.3")}</label>
-            <input onChange={e=> setLastname(e.target.value)} type="text" className="form-control input" />
+            <input onChange={handleChange} type="text" name='surname' className="form-control input" />
           </div>
 
           <div className="mb-3">
             <label className="form-label">{t("register.4")}</label>
-            <input onChange={e=> setEmail(e.target.value)} type="email" className="form-control input" />
+            <input onChange={handleChange} type="email" name="email" className="form-control input" />
           </div>
 
           <div className="mb-3">
             <label className="form-label">{t("register.5")}</label>
-            <input onChange={e=> setPassword(e.target.value)} type="password" className="form-control input" />
+            <input onChange={handleChange} type="password" name='password' className="form-control input" />
           </div>
           <div className="mb-3">
             <label className="form-label">{t("register.6")}</label>
-            <input onChange={e=> setAgainpassword(e.target.value)} type="password" className="form-control input" />
+            <input onChange={handleChange} type="password" name='againpassword' className="form-control input" />
           </div>
           <p><Link to="/login" className='text'>{t("register.7")}</Link></p>
 

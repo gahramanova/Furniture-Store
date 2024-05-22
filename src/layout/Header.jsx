@@ -47,6 +47,12 @@ const Header = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
   
+
+  const activeName = localStorage.getItem("activeUser");
+  const activeNameParse = JSON.parse(activeName);
+
+
+  // console.log(adminParse)
   
   document.querySelectorAll('.nav-link').forEach(item => {
     item.addEventListener('click', () => {
@@ -154,26 +160,32 @@ const Header = () => {
                   />
                 </div>
                 <div>
-                  <Link to={localStorage.getItem("login") === "true" ? "/cart" : "/login"} type="button" style={{ backgroundColor: "#EFEEEB" }} className="btn position-relative mx-2 cart"
+                  <Link to={localStorage.getItem("login") === "true" || localStorage.getItem("email") ? "/cart" : "/login"} type="button" style={{ backgroundColor: "#EFEEEB" }} className="btn position-relative mx-2 cart"
 
                   >
                     <IoCartOutline />
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                      {localStorage.getItem("login") === "true" ? totalItems : 0}
+                      {localStorage.getItem("login") === "true" || localStorage.getItem("email") ? totalItems : 0}
                     </span>
                   </Link>
 
-                  <Link to={localStorage.getItem("login") === "true" ? "/wishlist" : "/login"} type="button" style={{ backgroundColor: "#EFEEEB" }} className='btn media position-relative mx-2'>
+                  <Link to={localStorage.getItem("login") === "true" || localStorage.getItem("email") ? "/wishlist" : "/login"} type="button" style={{ backgroundColor: "#EFEEEB" }} className='btn media position-relative mx-2'>
                     <i className="fa-regular fa-heart"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                      {localStorage.getItem("login") === "true" ? totalWishlistItems : 0}
+                      {localStorage.getItem("login") === "true" || localStorage.getItem("email") ? totalWishlistItems : 0}
                     </span>
                     </Link>
 
-                  {localStorage.getItem("login") === "true" ?
-                    <NavLink className="media" style={{ textDecoration: "none", color: "black" }} to={"/myprofile"}> <FaUserAlt className='dark-mode-logo mx-2'/>{t("header-login.2")} {localStorage.getItem("firstname")}
+                  {localStorage.getItem("login") === "true" && localStorage.getItem("activeUser") ?
+                    <NavLink className="media" style={{ textDecoration: "none", color: "black" }} to={"/myprofile"}> <FaUserAlt className='dark-mode-logo mx-2'/>{t("header-login.2")} {activeNameParse.firstname}
 
                     </NavLink>
+                    : localStorage.getItem("email") ? (
+                      <NavLink className="media" style={{ textDecoration: "none", color: "black" }} to={"/myprofile"}>
+                        <FaUserAlt className='dark-mode-logo mx-2' />
+                        {t("header-login.2")} Admin
+                      </NavLink>
+                    )
                     :
                     <span className='mx-2'>
                       <NavLink to={"/login"} className='btn mx-2 my-2' style={{ backgroundColor: "#EFEEEB" }}> <i className="fa-regular fa-user mx-2"></i>{t("header-login.0")}</NavLink>
@@ -269,17 +281,17 @@ const Header = () => {
                   <div className='mode-user'>
                     <div className='login-buttons'>
 
-                      {localStorage.getItem("login") === "true" ?
+                      {localStorage.getItem("login") === "true" || localStorage.getItem("email") ?
                         <NavLink style={{ textDecoration: "none", color: "black" }} to={"/myprofile"}> 
                         <FaUserAlt className='dark-mode-logo mx-2'/>
-                        {t("header-login.2")} {localStorage.getItem("firstname")}
+                        {t("header-login.2")} {activeNameParse.firstname}
 
                         </NavLink>
                         :
                         <span className='mx-2'>
                           <NavLink to={"/login"} className='btn mx-2 my-2' style={{ backgroundColor: "#EFEEEB" }}> <i className="fa-regular fa-user mx-2"></i>{t("header-login.0")}</NavLink>
                           <NavLink to={"/register"} className="btn" style={{ backgroundColor: "#EFEEEB" }}>
-                            <i className="fa-regular fa-user mx-2"></i>{t("header-login.1")}</NavLink>
+                            <i className="fa-regular fa-user mx-2"></i>{activeNameParse.firstname}</NavLink>
                         </span>
                       }
 

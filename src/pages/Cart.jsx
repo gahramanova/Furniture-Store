@@ -1,34 +1,31 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { MdDeleteOutline } from "react-icons/md";
 import { useCart } from 'react-use-cart';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import SingleInterestedCard from "../components/SingleIntrestedCard"
+import SingleInterestedCard from "../components/SingleIntrestedCard";
 import { ProductContext } from "../context/ProductContext";
-import swal from 'sweetalert'
-
-
+import swal from 'sweetalert';
 
 const Cart = () => {
   const [productData] = useContext(ProductContext);
-  const { t } = useTranslation()
-  const {
-    items,
-    updateItemQuantity,
-    removeItem,
-    isEmpty,
-    cartTotal } = useCart();
-
+  const { t } = useTranslation();
+  const { items, updateItemQuantity, removeItem, isEmpty, cartTotal } = useCart();
   const randomNumber = Math.floor(Math.random() * 46);
 
   return (
-    isEmpty ? <div className='d-flex justify-content-center'><img src="https://assets.materialup.com/uploads/16e7d0ed-140b-4f86-9b7e-d9d1c04edb2b/preview.png" width={"500px"}></img></div> :
+    isEmpty ? (
+      <div className='d-flex justify-content-center'>
+        <img src="https://assets.materialup.com/uploads/16e7d0ed-140b-4f86-9b7e-d9d1c04edb2b/preview.png" width={"500px"} alt="Empty Cart" />
+      </div>
+    ) : (
       <>
         <section className='cart-section-one mx-4'>
           <div className='container mt-4'>
             <div className='row'>
-              <div className='col-12 col-lg-8'>
-                <table className="table">
+              <div className='col-12 col-sm-6 col-md-8 col-lg-8'>
+              <div className='table-responsive'>
+              <table className="table">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -41,10 +38,10 @@ const Cart = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {items.map((item, c) => (
-                      <tr key={c}>
-                        <td>{c + 1}</td>
-                        <td><img src={item.img[0]} style={{ width: "100%", objectFit: "contain", height: "70px" }} className="card-img-top" alt="..." /></td>
+                    {items.map((item, index) => (
+                      <tr key={index}>
+                        <td>{index + 1}</td>
+                        <td><img src={item.img[0]} style={{ maxWidth: "100%", objectFit: "contain", maxHeight: "70px" }} className="card-img-top" alt="Product" /></td>
                         <td style={{ color: "#F57A59" }}>{item.title}</td>
                         <td style={{ color: "#F57A59" }}>{item.price}$</td>
                         <td style={{ color: "#F57A59" }}>
@@ -64,6 +61,7 @@ const Cart = () => {
                     ))}
                   </tbody>
                 </table>
+              </div>
                 <div className='d-flex justify-content-between mt-3 cards'>
                   <Link to={"/contact"} style={{ textDecoration: "none", color: "black" }}>
                     <div className='part-one'>
@@ -71,7 +69,7 @@ const Cart = () => {
                         <div className='m-3'><i className="fa-solid fa-phone" style={{ color: "#f59a57" }}></i></div>
                         <div>
                           <h5 className='dark-text'>{t("cart.5")}</h5>
-                          <p className='dark-text' style={{ color: "ccc" }}>{t("cart.6")}</p>
+                          <p className='dark-text' style={{ color: "#ccc" }}>{t("cart.6")}</p>
                         </div>
                       </div>
                     </div>
@@ -81,7 +79,7 @@ const Cart = () => {
                       <div className='m-3'><i className="fa-solid fa-lock" style={{ color: "#f59a57" }}></i></div>
                       <div>
                         <h5 className='dark-text'>{t("cart.7")}</h5>
-                        <p className='dark-text' style={{ color: "ccc" }}>{t("cart.8")}</p>
+                        <p className='dark-text' style={{ color: "#ccc" }}>{t("cart.8")}</p>
                       </div>
                     </div>
                   </div>
@@ -90,13 +88,13 @@ const Cart = () => {
                       <div className='m-3'><i className="fa-solid fa-shield-halved" style={{ color: "#f59a57" }}></i></div>
                       <div>
                         <h5 className='dark-text'>{t("cart.9")}</h5>
-                        <p className='dark-text' style={{ color: "ccc" }}>{t("cart.10")}</p>
+                        <p className='dark-text' style={{ color: "#ccc" }}>{t("cart.10")}</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className='col-12 col-lg-4'>
+              <div className='col-12 col-sm-6 col-md-4 col-lg-4'>
                 <div className='beside-container'>
                   <div className='cart-content'>
                     <h3 className='total fw-bold dark-text'>{t("cart.0")} </h3>
@@ -126,6 +124,7 @@ const Cart = () => {
               <div className='row row-cols-2 row-cols-md-4 g-4 my-3'>
                 {productData.slice(randomNumber, randomNumber + 4).map(item => (
                   <SingleInterestedCard
+                    key={item.id}
                     id={item.id}
                     title={item.title}
                     img1={item.img[0]}
@@ -134,16 +133,15 @@ const Cart = () => {
                     rating={item.rating}
                     alldata={item}
                   />
-
                 ))}
               </div>
             </div>
           </div>
         </section>
-
-
       </>
-  )
-}
+    )
+  );
+};
 
-export default Cart
+export default Cart;
+

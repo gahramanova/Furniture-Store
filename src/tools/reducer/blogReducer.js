@@ -38,7 +38,11 @@ export const blogReducer = (state=blog, action) => {
     return state.filter(({id})=> {
       return (id !== action.id) 
     })
-  
+
+    
+    case "SET_BLOGS":
+      return action.blogs;
+      
     default:
       return state;
   }

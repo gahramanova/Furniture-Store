@@ -33,7 +33,7 @@ const SingleProducts = ({img1,title,price,category,rating,alldata}) => {
           </Link>
           <div className='cart d-flex justify-content-around'>
                 <button onClick={()=>{
-                  if (localStorage.getItem("login") === "true") {
+                  if (localStorage.getItem("login") === "true" || localStorage.getItem("email")) {
                     addItem(alldata)
                     swal("Add to cart!", "You clicked the button!", "success");
                   } else {

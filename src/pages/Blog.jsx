@@ -24,9 +24,9 @@ const Blog = () => {
         <div className='row'>
          {blog.map(item=>(
            <div className='col-12 col-sm-12 col-md-3'>
-           <div className="card g-4">
+           <div className="card mt-3">
            <Link to={`/blog/${(slugify(item.title))}`} style={{textDecoration: "none", color: "black"}}>
-           <img src={item.img[0]} className="card-img-top" alt="..." />
+           <img src={item.img} className="card-img-top" alt="..." />
                <div className="card-body">
                  <h5 className="card-title fw-bold">{item.title}</h5>
                  <p className="card-text">{item.desc.slice(1,100)}...</p>

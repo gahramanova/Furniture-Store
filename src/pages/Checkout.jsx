@@ -43,7 +43,7 @@ const Checkout = () => {
                 <div className='col-6'>
                     <form onSubmit={checkOutSubmit}>
                         <div className='d-flex'>
-                            <h3 className='mt-3 billing fw-bold'>{t("checkout.0")}</h3>
+                            <h3 className='mt-3 billing fw-bold '>{t("checkout.0")}</h3>
                         </div>
                         <h6 style={{ color: "#F59A57" }} className='fw-bold mt-4'>{t("checkout.1")}</h6>
                         <div class={`alert alert-${alert}`} role="alert" className="p-0">
@@ -84,8 +84,8 @@ const Checkout = () => {
                                     <tr key={c}>
                                         <td >{c + 1}</td>
                                         <td><img src={item.img[0]} className='card-images' /></td>
-                                        <td style={{ color: "#F56A59" }}>{item.title}</td>
-                                        <td style={{ color: "#F56A59" }}>{item.price}$</td>
+                                        <td style={{ color: "#F59A57" }}>{item.title}</td>
+                                        <td style={{ color: "#F59A57" }}>{item.price}$</td>
                                     </tr>
                                 ))}
                             </tbody>

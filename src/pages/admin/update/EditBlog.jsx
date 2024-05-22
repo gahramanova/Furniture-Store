@@ -3,7 +3,7 @@ import BlogForm from '../../../components/BlogForm'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import slugify from 'react-slugify'
-import { editBlog } from '../../../tools/action/blogAction'
+import { editBlog, editBlogFromDatabase } from '../../../tools/action/blogAction'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -19,7 +19,7 @@ const EditBlog = () => {
         <div className='container'>
         <h2 className='fw-bold text-center my-4'>Edit Blog</h2>
         <BlogForm editData = {selectBlog[0]} comingblog={(item)=> {
-          dispatch(editBlog(selectBlog[0].id, item))
+          dispatch(editBlogFromDatabase(selectBlog[0].id, item))
           navigate("/dashboard")
         }}/>
 

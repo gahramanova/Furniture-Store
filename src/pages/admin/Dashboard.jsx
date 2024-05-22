@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {Link, useNavigate} from "react-router-dom"
 import slugify from 'react-slugify'
-import { removeBlog } from '../../tools/action/blogAction'
+import {  removeBlogFromDatabase } from '../../tools/action/blogAction'
 import { MdDeleteOutline } from "react-icons/md";
 
 
@@ -30,13 +30,13 @@ const Dashboard = () => {
         {blogs.map((item,c)=> (
              <tr key={c}>    
              <th scope="row">{c+1}</th>
-             <td><img src={item.img[0]} width={"100px"}/></td>
+             <td><img src={item.img} width={"100px"}/></td>
              <td>{item.title}</td>
              <td>{item.date}</td>
              <td><Link to={`/dashboard/edit/${slugify(item.title)}`} className='btn edit'>Edit</Link></td>
              <td><button onClick={()=>{
-              dispatch(removeBlog({id:item.id}))
-             }} className='btn remove'><MdDeleteOutline /></button></td>
+              dispatch(removeBlogFromDatabase(item.id))
+             }} className='btn remove'><MdDeleteOutline/></button></td>
              </tr>
         ))}
            

@@ -88,7 +88,7 @@ const Products = () => {
 
       <div className='container mx-3 my-2 section-one'>
         <div className="row">
-          <div className="col-12 col-sm-12 col-md-4" data-aos="fade-right">
+          <div className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" data-aos="fade-right">
             <div className='sidebar mt-3'>
               <div className='filter-by-price'>
                 <h5 className='fw-bold' style={{ color: "#F59A57" }}>{t("products.1")}</h5>
@@ -135,7 +135,7 @@ const Products = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-sm-12 col-md-8" data-aos="fade-left">
+          <div className="col-12 col-sm-6 col-md-8 col-lg-8 col-xl-8" data-aos="fade-left">
             <div className='select d-flex justify-content-end'>
               <Select
                 defaultValue="all"

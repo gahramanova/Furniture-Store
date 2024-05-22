@@ -353,7 +353,7 @@ const blogs = useSelector(p => p)
     <p style={{ color: "#ccc" }}>{t("home-section-one.16")}</p>
     <div className="row">
       <div className="col-12 col-sm-6 col-md-8 col-lg-8">
-        <div className="row">
+        <div className="row" data-aos="fade-up-right">
           {productData.slice(randomNumber, randomNumber+3).map(item => (
             <div className="col-12 col-sm-6 col-md-6 col-lg-5 col-xxl-4">
               <SingleHomeProducts
@@ -369,7 +369,7 @@ const blogs = useSelector(p => p)
           ))}
         </div>
       </div>
-      <div className="col-12 col-sm-6 col-md-4 col-lg-4">
+      <div className="col-12 col-sm-6 col-md-4 col-lg-4" data-aos="flip-left">
         <img className="lazy" src={lazy} style={{ width: "100%", height: "540px", borderRadius: "15px" }} />
       </div>
     </div>
@@ -409,12 +409,12 @@ const blogs = useSelector(p => p)
       <section className="section7 my-5 mx-5">
         <div className="container">
           <h2 className="fw-bold">{t("home-section-one.25")}</h2>
-          <div className='row'>
-         {blogs.map(item=>(
+          <div className='row' data-aos="flip-down">
+         {blogs.slice(1,5).map(item=>(
            <div className='col-12 col-sm-6 col-md-3'>
            <div className="card g-4">
            <Link to={`/blog/${(slugify(item.title))}`} style={{textDecoration: "none", color: "black"}}>
-           <img src={item.img[0]} className="card-img-top" alt="..." />
+           <img src={item.img} className="card-img-top" alt="..." />
                <div className="card-body">
                  <h5 className="card-title fw-bold">{item.title}</h5>
                  <p className="card-text">{item.desc.slice(1,100)}...</p>
