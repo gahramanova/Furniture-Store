@@ -27,21 +27,25 @@ const Myprofile = () => {
           <div classname="container">
             <div classname="row ">
               <div class="col-12 col-lg-12">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-                <h2 class="fw-bold">{localStorage.getItem("activeUser")? (activeNameParse.firstname) : "" }</h2>
-                <h2 className='fw-bold'>{localStorage.getItem("activeUser")? (activeNameParse.surname) : "" }</h2>
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                </svg>
+                <h2 class="fw-bold">{localStorage.getItem("login") === "true" && localStorage.getItem("activeUser") ? activeNameParse.firstname : "Admin" }</h2>
+                <h2 className='fw-bold'>{localStorage.getItem("login") === "true" && localStorage.getItem("activeUser") ? activeNameParse.surname : "" }</h2>
                 <p><a class="btn btn-outline-dark" href="#">Go to settings »</a></p>
                 <button className='btn btn-dark' onClick={() => {
                   localStorage.removeItem("login");
-                  localStorage.removeItem("email")
-                  localStorage.removeItem("password")
+                  localStorage.removeItem("email");
+                  localStorage.removeItem("password");
                   location.assign("/login");
                 }}> Logout</button>
               </div>
+
             </div>
             {
-              (localStorage.getItem("email") ) ?
-              <NavLink to={"/dashboard"} className="btn btn-dark mt-3">Dashboard</NavLink> : ""
+              (localStorage.getItem("email")) ?
+                <NavLink to={"/dashboard"} className="btn btn-dark mt-3">Dashboard</NavLink> : ""
             }
 
           </div>
