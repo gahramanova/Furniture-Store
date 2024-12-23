@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+-import React, {useEffect} from 'react'
 import contactImageOne from "../assets/img/contact-image-1.png"
 import contactImageTwo from "../assets/img/contact-image-2.png"
 import { useTranslation } from 'react-i18next';
